@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import { Link } from "react-router-dom";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import logo from "../assets/logo2.png";
@@ -147,29 +148,29 @@ export default function Navbar() {
             <div className="space-y-1 pb-4 pt-2">
               {/* Current: "bg-emerald-50 border-emerald-500 text-emerald-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
               <Disclosure.Button
-                as="a"
-                href="/services"
+                as={Link}
+                to="/services"
                 className="block border-l-4 border-emerald-500 bg-emerald-50 py-2 pl-3 pr-4 text-base font-medium text-emerald-700"
               >
                 Services
               </Disclosure.Button>
               <Disclosure.Button
-                as="a"
-                href="/mission"
+                as={Link}
+                to="/mission"
                 className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
               >
                 Mission
               </Disclosure.Button>
               <Disclosure.Button
-                as="a"
-                href="/about"
+                as={Link}
+                to="/about"
                 className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
               >
                 About
               </Disclosure.Button>
               <Disclosure.Button
-                as="a"
-                href="/contact"
+                as={Link}
+                to="/contact"
                 className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
               >
                 Contact

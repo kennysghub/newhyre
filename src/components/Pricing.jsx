@@ -172,11 +172,6 @@ export default function Pricing() {
             ))}
           </div>
         </div>
-
-        {/* Logo cloud */}
-
-        {/* Testimonial section */}
-
         {/* FAQ section */}
         <div className="mx-auto my-24 max-w-7xl px-6 sm:my-6 lg:px-8">
           <div className="mx-auto max-w-4xl divide-y divide-white">

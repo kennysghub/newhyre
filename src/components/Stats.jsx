@@ -1,11 +1,11 @@
-import hero2 from '../assets/hero2.jpg'
+import hero2 from "../assets/hero2.jpg";
 const stats = [
-  { id: 1, name: 'Renewable Hydrogen Produced', value: '50,000 kg' },
-  { id: 2, name: 'Emission Reduction', value: '18,000 tons' },
-  { id: 3, name: 'Partner Organizations', value: '69' },
-  { id: 4, name: 'Projects Successfully Completed', value: '666' },
-  { id: 5, name: 'Global Reach', value: '420 Countries' }
-]
+  { id: 1, name: "Renewable Hydrogen Produced", value: "50,000 kg" },
+  { id: 2, name: "Emission Reduction", value: "18,000 tons" },
+  { id: 3, name: "Partner Organizations", value: "69" },
+  { id: 4, name: "Projects Successfully Completed", value: "666" },
+  { id: 5, name: "Global Reach", value: "420 Countries" },
+];
 
 export default function Stats() {
   return (
@@ -24,13 +24,20 @@ export default function Stats() {
               {/* Trusted by thousands of creators&nbsp;worldwide */}
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-            Driven by sustainability and innovation, we let our impact do the talking. From hydrogen production to CO2 reduction, these key metrics encapsulate our mission and reach.
+              Driven by sustainability and innovation, we let our impact do the talking. From
+              hydrogen production to CO2 reduction, these key metrics encapsulate our mission and
+              reach.
             </p>
             <dl className="mt-16 grid max-w-xl grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 xl:mt-16">
               {stats.map((stat) => (
-                <div key={stat.id} className="flex flex-col gap-y-3 border-l border-gray-900/10 pl-6">
+                <div
+                  key={stat.id}
+                  className="flex flex-col gap-y-3 border-l border-gray-900/10 pl-6"
+                >
                   <dt className="text-sm leading-6 text-gray-600">{stat.name}</dt>
-                  <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900">{stat.value}</dd>
+                  <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900">
+                    {stat.value}
+                  </dd>
                 </div>
               ))}
             </dl>
@@ -38,5 +45,5 @@ export default function Stats() {
         </div>
       </div>
     </div>
-  )
+  );
 }
