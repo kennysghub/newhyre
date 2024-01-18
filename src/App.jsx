@@ -18,7 +18,7 @@ export default function App() {
     <>
       <Navbar />
       <Routes>
-        <Route
+        {/* <Route
           path="/"
           element={
             <div>
@@ -30,10 +30,11 @@ export default function App() {
               <CTA />
             </div>
           }
-        />
+        /> */}
+        <Route path="/" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/mission" element={<Mission />} />
+
+        {/* <Route path="/mission" element={<Mission />} /> */}
         <Route path="/services" element={<Services />} />
 
         {/* Add other routes here */}
