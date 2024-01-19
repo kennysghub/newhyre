@@ -1,10 +1,4 @@
-import Hero from "./components/Hero";
 import Footer from "./components/Footer";
-import Team from "./components/Team";
-import CTA from "./components/CTA";
-import Stats from "./components/Stats";
-import Testimonial from "./components/Testimonial";
-import References from "./components/References";
 import { Routes, Route } from "react-router-dom";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";

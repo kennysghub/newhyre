@@ -33,18 +33,18 @@ export default function Navbar() {
                 </div>
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                   {/* Current: "border-emerald-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
-                  <a
-                    href="/"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                  <Link
+                    to="/"
+                    clLinkssName="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
                   >
                     About
-                  </a>
-                  <a
-                    href="/services"
+                  </Link>
+                  <Link
+                    to="/services"
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
                   >
                     Offered Services
-                  </a>
+                  </Link>
                   {/* <a
                     href="/mission"
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
@@ -57,12 +57,12 @@ export default function Navbar() {
                   >
                     About
                   </a> */}
-                  <a
-                    href="contact"
+                  <Link
+                    to="contact"
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
                   >
                     Contact
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
@@ -148,26 +148,27 @@ export default function Navbar() {
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 pb-4 pt-2">
               {/* Current: "bg-emerald-50 border-emerald-500 text-emerald-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
+
+              {/* <Disclosure.Button
+                as={Link}
+                to="/mission"
+                className="block border-l-4 border-emerald-500 bg-emerald-200 py-2 pl-3 pr-4 text-base font-medium text-emerald-700 hover:border-emerald-300 hover:text-emerald-600"
+              >
+                Mission
+              </Disclosure.Button> */}
+              <Disclosure.Button
+                as={Link}
+                to="/"
+                className="block border-l-4 border-emerald-500 bg-emerald-200 py-2 pl-3 pr-4 text-base font-medium text-emerald-700 hover:border-emerald-300 hover:text-emerald-600"
+              >
+                About
+              </Disclosure.Button>
               <Disclosure.Button
                 as={Link}
                 to="/services"
                 className="bg-emerald-500 border-emerald-500 text-emerald-700 hover:bg-emerald-50 hover:border-emerald-300 hover:text-emerald-700"
               >
                 Services
-              </Disclosure.Button>
-              <Disclosure.Button
-                as={Link}
-                to="/mission"
-                className="block border-l-4 border-emerald-500 bg-emerald-200 py-2 pl-3 pr-4 text-base font-medium text-emerald-700 hover:border-emerald-300 hover:text-emerald-600"
-              >
-                Mission
-              </Disclosure.Button>
-              <Disclosure.Button
-                as={Link}
-                to="/about"
-                className="block border-l-4 border-emerald-500 bg-emerald-200 py-2 pl-3 pr-4 text-base font-medium text-emerald-700 hover:border-emerald-300 hover:text-emerald-600"
-              >
-                About
               </Disclosure.Button>
               <Disclosure.Button
                 as={Link}
