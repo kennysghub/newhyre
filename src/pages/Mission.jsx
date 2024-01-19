@@ -1,5 +1,5 @@
 import { CheckCircleIcon, InformationCircleIcon } from "@heroicons/react/20/solid";
-import missionImg from "../assets/mission/mission.avif";
+// import missionImg from "../assets/mission/mission.avif";
 export default function Mission() {
   return (
     <div className="bg-white px-6 py-32 lg:px-8">
@@ -73,8 +73,8 @@ export default function Mission() {
           <figure className="mt-10 border-l border-emerald-600 pl-9">
             <blockquote className="font-semibold text-gray-900">
               <p>
-                “Hyre-Energy's dedication to advancing hydrogen energy is both inspiring and
-                essential. Their work is a cornerstone in building a greener tomorrow.”
+                Hyre Energys dedication to advancing hydrogen energy is both inspiring and
+                essential. Their work is a cornerstone in building a greener tomorrow.
               </p>
             </blockquote>
             <figcaption className="mt-6 flex gap-x-4">
@@ -100,11 +100,11 @@ export default function Mission() {
           </p>
         </div>
         <figure className="mt-16">
-          <img
+          {/* <img
             className="aspect-video rounded-xl bg-gray-50 object-cover"
             src={missionImg}
             alt=""
-          />
+          /> */}
           <figcaption className="mt-4 flex gap-x-2 text-sm leading-6 text-gray-500">
             <InformationCircleIcon
               className="mt-0.5 h-5 w-5 flex-none text-gray-300"

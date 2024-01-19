@@ -1,10 +1,11 @@
 import Footer from "./components/Footer";
+
 import { Routes, Route } from "react-router-dom";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import "./App.css";
 import About from "./pages/About";
-import Mission from "./pages/Mission";
+// import Mission from "./pages/Mission";
 import Services from "./pages/Services";
 
 export default function App() {
