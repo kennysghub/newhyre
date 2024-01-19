@@ -4,6 +4,7 @@ import service1 from "../assets/service-1.jpg";
 import service2 from "../assets/service-2.jpg";
 import service3 from "../assets/service-3.jpg";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
+import { Link } from "react-router-dom";
 
 const servicesData = [
   {
@@ -62,7 +63,7 @@ export default function Services() {
             
           </div> */}
         </div>
-        <a href="/services">
+        <Link to="/services">
           <button
             type="button"
             className="mt-4 mb-4 inline-flex items-center gap-x-1.5 rounded-md bg-blue-500 px-2.5 py-1.5 text-sm font-semibold text-zinc-50 shadow-lg hover:bg-emerald-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
@@ -70,7 +71,7 @@ export default function Services() {
             Learn More
             <ChevronRightIcon className="-mr-0.5 h-5 w-5" aria-hidden="true" />
           </button>
-        </a>
+        </Link>
       </div>
     </div>
   );
