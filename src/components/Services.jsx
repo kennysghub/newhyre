@@ -33,7 +33,8 @@ export default function Services() {
   return (
     <div className="bg-white py-8 lg:px-8">
       <div className="max-w-5xl mx-auto px-6">
-        <h2 className="text-2xl font-bold mb-4">Services</h2>
+      {/* "text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" */}
+        <h2 className="text-3xl font-bold mb-4 sm:text-4xl">Services</h2>
         <div className="flex space-x-4 mb-6">
           {servicesData.map((service) => (
             <button
