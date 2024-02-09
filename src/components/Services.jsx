@@ -9,19 +9,19 @@ import { Link } from "react-router-dom";
 const servicesData = [
   {
     id: 1,
-    title: "1. Integration Support and Project Management",
+    title: "Integration Support and Project Management",
     description: "Image for Service One...",
     imageUrl: service1,
   },
   {
     id: 2,
-    title: "2. Emissions Reduction Planning",
+    title: "Emissions Reduction Planning",
     description: "Image for Service Two...",
     imageUrl: service2,
   },
   {
     id: 3,
-    title: "3. Technology Consulting - Customized Solutions and Advisory Services",
+    title: "Technology Consulting - Customized Solutions and Advisory Services",
     description: "Image for Service Three...",
     imageUrl: service3,
   },
@@ -33,7 +33,6 @@ export default function Services() {
   return (
     <div className="bg-white py-8 lg:px-8">
       <div className="max-w-5xl mx-auto px-6">
-      {/* "text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" */}
         <h2 className="text-3xl font-bold mb-4 sm:text-4xl">Services</h2>
         <div className="flex space-x-4 mb-6">
           {servicesData.map((service) => (
@@ -57,12 +56,6 @@ export default function Services() {
             src={selectedService.imageUrl}
             alt={selectedService.title}
           />
-
-          {/* <div>
-            <h3 className="text-xl font-semibold">{selectedService.title}</h3>
-            <p>{selectedService.description}</p>
-            
-          </div> */}
         </div>
         <Link to="/services">
           <button
