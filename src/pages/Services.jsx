@@ -6,7 +6,7 @@ export default function Services() {
       <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
         <p className="text-base font-semibold leading-7 text-emerald-600">HyRe-Energy</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-          Offered Services
+          Services
         </h1>
         <p className="mt-6 text-xl leading-8">
           We pride ourselves on offering 3 exclusive services that we view as necessary for the

@@ -144,7 +144,7 @@ export default function Navbar() {
                     to="/services"
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
                   >
-                    Offered Services
+                    Services
                   </Link>
                   <Link
                     to="/contact"
@@ -178,7 +178,7 @@ export default function Navbar() {
                 to="/services"
                 className="block text-base font-medium text-emerald-700 hover:text-emerald-600"
               >
-                Offered Services
+                Services
               </Disclosure.Button>
               <Disclosure.Button
                 as={Link}
