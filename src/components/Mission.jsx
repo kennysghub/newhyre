@@ -92,7 +92,7 @@ export default function Mission() {
                 aria-hidden="true"
               />
               <span>
-                <strong className="font-semibold text-gray-900">Cutting-Edge Technology Applications for Global Decarbonization.</strong>
+                <strong className="font-semibold text-gray-900">Cutting-Edge Technology Applications for Global Decarbonization</strong>
                 <br />
                 At HyRe Energy, we believe hydrogen can alleviate many challenges in the global
                 fight against climate change because of its extraordinary potential. We are not just
