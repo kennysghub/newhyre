@@ -28,7 +28,7 @@ export default function Services() {
         <div className="mt-10">
           <div className=" px-6 py-4 lg:px-8">
             <div className="mx-auto max-w-7xl text-base leading-7 text-gray-700">
-              <p className="text-base font-semibold leading-7 text-header-3">HyRe-Energy</p>
+              <p className="text-base font-semibold leading-7 text-header-3">HyRe Energy</p>
     <h1 className="mt-2 text-3xl font-bold tracking-tight text-header-3 sm:text-4xl">
       Services
     </h1>
