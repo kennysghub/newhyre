@@ -176,7 +176,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="relative bg-white">
+    <div className="relative bg-custom-bg">
       <div className="lg:absolute lg:inset-0 lg:left-1/2">
         <img
           className="h-64 w-full bg-gray-50 object-cover sm:h-80 lg:absolute lg:h-full"
@@ -187,8 +187,8 @@ export default function Contact() {
       <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32">
         <div className="px-6 lg:px-8">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900">Let's work together</h2>
-            <p className="mt-2 text-lg leading-8 text-gray-600">
+            <h2 className="text-3xl font-bold tracking-tight text-header-3">Let's work together</h2>
+            <p className="mt-2 text-lg leading-8 text-gray-50">
               Join us in the hydrogen revolution, paving the way for sustainable living and
               renewable energy solutions.
             </p>
@@ -198,7 +198,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="first-name"
-                    className="block text-sm font-semibold leading-6 text-gray-900"
+                    className="block text-sm font-semibold leading-6 text-header-4"
                   >
                     First name
                   </label>
@@ -207,7 +207,7 @@ export default function Contact() {
                     name="firstName"
                     id="first-name"
                     autoComplete="given-name"
-                    className=" block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-emerald-600 sm:text-sm sm:leading-6"
+                    className=" block w-full rounded-md border-0 px-3.5 py-2 text-header-4 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-emerald-600 sm:text-sm sm:leading-6"
                     value={formData.firstName}
                     onChange={handleChange}
                   />
@@ -217,7 +217,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="last-name"
-                    className="block text-sm font-semibold leading-6 text-gray-900"
+                    className="block text-sm font-semibold leading-6 text-header-4"
                   >
                     Last name
                   </label>
@@ -226,7 +226,7 @@ export default function Contact() {
                     name="lastName"
                     id="last-name"
                     autoComplete="family-name"
-                    className=" block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-emerald-600 sm:text-sm sm:leading-6"
+                    className=" block w-full rounded-md border-0 px-3.5 py-2 text-header-4 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-emerald-600 sm:text-sm sm:leading-6"
                     value={formData.lastName}
                     onChange={handleChange}
                   />
@@ -236,7 +236,7 @@ export default function Contact() {
                 <div className="sm:col-span-2">
                   <label
                     htmlFor="email"
-                    className="block text-sm font-semibold leading-6 text-gray-900"
+                    className="block text-sm font-semibold leading-6 text-header-4"
                   >
                     Email
                   </label>
@@ -245,7 +245,7 @@ export default function Contact() {
                     name="email"
                     type="email"
                     autoComplete="email"
-                    className=" block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-emerald-600 sm:text-sm sm:leading-6"
+                    className=" block w-full rounded-md border-0 px-3.5 py-2 text-header-4 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-emerald-600 sm:text-sm sm:leading-6"
                     value={formData.email}
                     onChange={handleChange}
                   />
@@ -255,7 +255,7 @@ export default function Contact() {
                 <div className="sm:col-span-2">
                   <label
                     htmlFor="company"
-                    className="block text-sm font-semibold leading-6 text-gray-900"
+                    className="block text-sm font-semibold leading-6 text-header-4"
                   >
                     Company
                   </label>
@@ -264,7 +264,7 @@ export default function Contact() {
                     name="company"
                     id="company"
                     autoComplete="organization"
-                    className=" block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-emerald-600 sm:text-sm sm:leading-6"
+                    className=" block w-full rounded-md border-0 px-3.5 py-2 text-header-4 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-emerald-600 sm:text-sm sm:leading-6"
                     value={formData.company}
                     onChange={handleChange}
                   />
@@ -274,7 +274,7 @@ export default function Contact() {
                 <div className="sm:col-span-2">
                   <label
                     htmlFor="phone"
-                    className="block text-sm font-semibold leading-6 text-gray-900"
+                    className="block text-sm font-semibold leading-6 text-header-4"
                   >
                     Phone
                   </label>
@@ -283,7 +283,7 @@ export default function Contact() {
                     name="phone"
                     id="phone"
                     autoComplete="tel"
-                    className=" block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-emerald-600 sm:text-sm sm:leading-6"
+                    className=" block w-full rounded-md border-0 px-3.5 py-2 text-header-4 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-emerald-600 sm:text-sm sm:leading-6"
                     value={formData.phone}
                     onChange={handleChange}
                   />
@@ -293,7 +293,7 @@ export default function Contact() {
                 <div className="sm:col-span-2">
                   <label
                     htmlFor="message"
-                    className="block text-sm font-semibold leading-6 text-gray-900"
+                    className="block text-sm font-semibold leading-6 text-header-4"
                   >
                     How can we help you?
                   </label>
@@ -301,7 +301,7 @@ export default function Contact() {
                     id="message"
                     name="message"
                     rows={4}
-                    className=" block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-emerald-600 sm:text-sm sm:leading-6"
+                    className=" block w-full rounded-md border-0 px-3.5 py-2 text-header-4 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-emerald-600 sm:text-sm sm:leading-6"
                     value={formData.message}
                     onChange={handleChange}
                   />

@@ -1,6 +1,6 @@
-import Bobby from "../assets/Bobby.jpeg";
+import Bobby from "../assets/Bobby.jpg";
 import Alejandra from "../assets/Alejandra-Hormaza-Mejia.jpg";
-import Christian from "../assets/ChristianRose.jpeg";
+import Christian from "../assets/ChristianRose.jpg";
 
 const people = [
   {
@@ -23,63 +23,40 @@ const people = [
   },
 ];
 
-// export default function Team() {
-//   return (
-//     <div className="bg-white py-8 px-6 lg:px-8">
-//       <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our team</h2>
-//       <p className="mt-6 text-lg leading-8 text-gray-600">
-//         We’re a dynamic group of individuals who are passionate about what we do and dedicated to
-//         delivering the best results for our clients.
-//       </p>
-
-//       <div className="mt-8 grid max-w-7xl grid-cols-1 gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
-//         {/* Team members list */}
-//         {people.map((person) => (
-//           <div key={person.name} className="mx-auto max-w-2xl lg:mx-0">
-//             <img
-//               className="aspect-[2.2/2] w-48 rounded-2xl object-cover border-2 border-slate-900 shadow-lg hover:shadow-2xl hover:border-slate-400"
-//               src={person.imageUrl}
-//               alt=""
-//             />
-//             <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">{person.name}</h3>
-//             <p className="text-base leading-7 text-gray-600 antialiased hover:subpixel-antialiased">
-//               {person.role}
-//             </p>
-//             <ul className="mt-4">
-//               {person.bio.split("-").map(
-//                 (point, index) =>
-//                   point.trim() && (
-//                     <li key={index} className="list-disc">
-//                       {point}
-//                     </li>
-//                   )
-//               )}
-//             </ul>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
 
 export default function Team() {
+  const getObjectFitStyle = (name) => {
+    // Apply 'contain' for Alejandra's image to avoid squishing, 'cover' for others
+    return name === "Alejandra Hormaza Mejia" ? "object-contain" : "object-cover";
+  };
   return (
-    <div className="bg-white py-8 lg:px-8">
+    <div className="bg-custom-bg py-8 lg:px-8">
       <div className="max-w-5xl mx-auto px-6">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our team</h2>
-        <p className="mt-6 text-lg leading-8 text-gray-600">
+        <h2 className="text-3xl font-bold tracking-tight text-header-3 sm:text-4xl">Our team</h2>
+        <p className="mt-6 text-lg leading-8 text-gray-50">
           We’re a dynamic group of individuals who are passionate about what we do and dedicated to
           delivering the best results for our clients.
         </p>
 
-        <div className="mt-8 grid grid-cols-1 gap-x-8 gap-y-20 sm:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-8 text-gray-50 grid grid-cols-1 gap-x-8 gap-y-20 sm:grid-cols-2 xl:grid-cols-3">
           {people.map((person) => (
             <div key={person.name} className="mx-auto">
+              <div className="w-48 h-64 flex justify-center items-center overflow-hidden rounded-2xl border-1 border-slate-600 shadow-lg hover:shadow-2xl">
               <img
-                className="aspect-[2.2/2] w-48 rounded-2xl object-cover border-2 border-slate-600 shadow-lg hover:shadow-2xl"
+              // className="w-full h-full object-fit"
+              className={`w-full h-full bg-transparent ${getObjectFitStyle(person.name)}`}
+              src={person.imageUrl}
+              alt={person.name}
+            />
+              </div>
+              {/* <img
+                // className="aspect-[2.2/2] w-48 rounded-2xl object-contain border-2 border-slate-600 shadow-lg hover:shadow-2xl"
+                className="w-48 h-auto rounded-2xl object-contain border-2 border-slate-600 shadow-lg hover:shadow-2xl"
                 src={person.imageUrl}
                 alt=""
-              />
+              /> */}
+              
+              
               <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">{person.name}</h3>
               <p className="text-base leading-7 text-gray-600 antialiased hover:subpixel-antialiased">
                 {person.role}
