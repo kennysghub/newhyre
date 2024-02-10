@@ -10,6 +10,7 @@ import Services from "./pages/Services";
 
 export default function App() {
   return (
+    <div >
     <>
       <Navbar />
       <Routes>
@@ -36,5 +37,6 @@ export default function App() {
       </Routes>
       <Footer />
     </>
+    </div>
   );
 }
