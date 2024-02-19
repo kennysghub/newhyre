@@ -1,8 +1,6 @@
 // Services.js
 import { useState } from "react";
-import service1 from "../assets/service-1.jpg";
-import service2 from "../assets/service-2.jpg";
-import service3 from "../assets/service-3.jpg";
+
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import { Link } from "react-router-dom";
 
@@ -12,7 +10,7 @@ const servicesData = [
     title: "Integration Support and Project Management",
     description:
       "Learn about how we can provide unique hydrogen technology support and management to your specific project.",
-    imageUrl: service1,
+    
     hash: "#integration-support",
   },
   {
@@ -20,7 +18,7 @@ const servicesData = [
     title: "Emissions Reduction Planning",
     description:
       "Learn more about the studies we can complete for any industry to demonstrate the feasibility of an application.",
-    imageUrl: service2,
+    
     hash: "#emissions-reduction",
   },
   {
@@ -28,7 +26,7 @@ const servicesData = [
     title: "Customized Solutions and Advisory Services",
     description:
       "Learn more about the scientific advice we can provide for your future investment opportunities.",
-    imageUrl: service3,
+    
     hash: "#technology-consulting",
   },
 ];
