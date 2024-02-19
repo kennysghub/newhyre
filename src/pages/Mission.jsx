@@ -1,5 +1,5 @@
 import { CheckCircleIcon, InformationCircleIcon } from "@heroicons/react/20/solid";
-// import missionImg from "../assets/mission/mission.avif";
+
 export default function Mission() {
   return (
     <div className="bg-white px-6 py-32 lg:px-8">

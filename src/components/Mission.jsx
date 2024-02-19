@@ -11,7 +11,7 @@ export default function Mission() {
         <h2 className="text-3xl font-bold tracking-tight text-header-3 sm:text-2xl text-center">
           Three Core Beliefs
         </h2>
-        <div className="mt-5">
+        <div className="text-lg mt-5">
           <ul role="list" className="space-y-8 text-gray-600">
             <li className="flex gap-x-3">
               {" "}
@@ -68,7 +68,7 @@ export default function Mission() {
             </li>
           </ul>
         </div>
-        <div className="mt-16">
+        <div className="text-lg mt-16">
           <h2 className="text-2xl font-bold tracking-tight text-header-3 text-center">
             Join Us in Our Mission
           </h2>

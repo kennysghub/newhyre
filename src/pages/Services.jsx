@@ -32,12 +32,12 @@ export default function Services() {
     <h1 className="mt-2 text-3xl font-bold tracking-tight text-header-3 sm:text-4xl">
       Services
     </h1>
-    <p className="mt-6 text-xl leading-8">
+    <p className="mt-6 text-lg leading-8">
       We pride ourselves on offering 3 exclusive services that we view as necessary for the adoption of hydrogen energy systems.
     </p>
 
               {/* Grid Layout Starts Here */}
-              <div className="mt-10 space-y-16 lg:space-y-4 lg:gap-8">
+              <div className="text-lg mt-10 space-y-16 lg:space-y-4 lg:gap-8">
                 {/* First Row - Paragraph then Image */}
                 <div className="flex flex-col lg:flex-row lg:items-center">
                   <div className="lg:w-1/2">
