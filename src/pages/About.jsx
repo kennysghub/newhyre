@@ -1,7 +1,7 @@
 import Mission from "../components/Mission";
 import Team from "../components/Team";
 import Services from "../components/Services";
-import { useState } from "react";
+
 
 export default function About() {
   return (
