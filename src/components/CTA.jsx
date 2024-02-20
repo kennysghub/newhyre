@@ -5,7 +5,7 @@ export default function CTA() {
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Ready to dive in?
           <br />
-          Get started with our team.
+          Get started with our team
         </h2>
         <div className="mt-10 flex items-center gap-x-6 lg:mt-0 lg:flex-shrink-0">
           <a
