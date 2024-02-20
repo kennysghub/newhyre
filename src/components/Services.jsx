@@ -35,16 +35,16 @@ export default function Services() {
   const [selectedService, setSelectedService] = useState(servicesData[0]);
 
   return (
-    <div className="bg-custom-bg py-8 lg:px-8">
-      <div className="bg-custom-bg max-w-5xl mx-auto px-6">
+    <div className="bg-custom-bg py-8 lg:px-8 sm:px-4">
+      <div className="bg-custom-bg max-w-5xl mx-auto px-6 ">
         <h2 className="text-3xl font-bold mb-4 sm:text-4xl text-header-3">Services</h2>
-        <div className="flex space-x-4 mb-6">
+        <div className="flex  flex-column justify-between gap-2 lg:gap-4  mb-6 text-xs lg:text-md lg:space-x-8">
           {servicesData.map((service) => (
             <button
               type="button"
               key={service.id}
               
-              className={`h-36 w-72 px-16 py-8 rounded-full border-4 text-smd font-semibold ${
+              className={`px-4 py-4 lg:h-36 lg:w-72 lg:px-8 lg:py-8 lg:text-lg rounded-full border-2 text-smd sm:px-4 font-semibold ${
                 selectedService.id === service.id
                   ? "bg-header-1 text-zinc-50"
                   : "bg-header-4 text-gray-700"
