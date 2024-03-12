@@ -42,11 +42,7 @@ export default function Team() {
             <div key={person.name} className="mx-auto">
               <div className=" flex justify-center items-center overflow-hidden ">
                 <img
-                  // className="w-full h-full object-fit"
-                  // className={`w-full h-full bg-transparent ${getObjectFitStyle(person.name)}`}
-                  // className="h-72  w-48 object-contain rounded-xl  border-slate-600 shadow-lg hover:shadow-2xl"
                   className=" h-72 w-48  rounded-xl  border-slate-600 shadow-lg hover:shadow-2xl"
-
                   src={person.imageUrl}
                   alt={person.name}
                 />
