@@ -7,14 +7,14 @@ import "./App.css";
 import About from "./pages/About";
 // import Mission from "./pages/Mission";
 import Services from "./pages/Services";
-
+import Main from "./pages/Main";
 export default function App() {
   return (
-    <div >
-    <>
-      <Navbar />
-      <Routes>
-        {/* <Route
+    <div>
+      <>
+        <Navbar />
+        <Routes>
+          {/* <Route
           path="/"
           element={
             <div>
@@ -27,16 +27,17 @@ export default function App() {
             </div>
           }
         /> */}
-        <Route path="/" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+          {/* <Route path="/" element={<About />} /> */}
+          <Route path="/" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
 
-        {/* <Route path="/mission" element={<Mission />} /> */}
-        <Route path="/services" element={<Services />} />
+          {/* <Route path="/mission" element={<Mission />} /> */}
+          <Route path="/services" element={<Services />} />
 
-        {/* Add other routes here */}
-      </Routes>
-      <Footer />
-    </>
+          {/* Add other routes here */}
+        </Routes>
+        <Footer />
+      </>
     </div>
   );
 }

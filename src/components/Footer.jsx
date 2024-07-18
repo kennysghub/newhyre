@@ -28,7 +28,7 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="bg-custom-bg">
+    <footer>
       <div className="mx-auto max-w-7xl overflow-hidden px-6  py-20 sm:py-24 lg:px-8">
         <nav
           className="mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12 "
@@ -36,7 +36,10 @@ export default function Footer() {
         >
           {navigation.main.map((item) => (
             <div key={item.name} className="pb-6">
-              <Link to={item.href} className="text-sm leading-6 text-header-3 hover:text-gray-900">
+              <Link
+                to={item.href}
+                className="text-sm leading-6 text-header-3 hover:text-gray-900"
+              >
                 {item.name}
               </Link>
             </div>
@@ -56,7 +59,9 @@ export default function Footer() {
             </a>
           ))}
         </div>
-        <p className="mt-10 text-center text-xs leading-5 text-header-3">HyRe Energy LLC 2024</p>
+        <p className="mt-10 text-center text-xs leading-5 text-header-3">
+          HyRe Energy LLC 2024
+        </p>
       </div>
     </footer>
   );
