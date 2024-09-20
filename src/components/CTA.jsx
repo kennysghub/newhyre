@@ -39,7 +39,7 @@ export default function CTA() {
             </div>
           </div>
 
-          <div className="relative bg-emerald-500 lg:col-span-10 lg:col-start-3 lg:row-start-1 lg:grid lg:grid-cols-10 lg:items-center lg:rounded-3xl">
+          <div className="relative bg-custom-blue lg:col-span-10 lg:col-start-3 lg:row-start-1 lg:grid lg:grid-cols-10 lg:items-center lg:rounded-3xl">
             <div
               aria-hidden="true"
               className="absolute inset-0 hidden overflow-hidden rounded-3xl lg:block"
@@ -67,7 +67,7 @@ export default function CTA() {
                       fill="currentColor"
                       width={4}
                       height={4}
-                      className="text-emerald-500"
+                      className="text-custom-yellow"
                     />
                   </pattern>
                 </defs>
@@ -100,7 +100,7 @@ export default function CTA() {
                       fill="currentColor"
                       width={4}
                       height={4}
-                      className="text-emerald-500"
+                      className="text-custom-yellow"
                     />
                   </pattern>
                 </defs>
@@ -118,7 +118,7 @@ export default function CTA() {
               >
                 Join Us in our Mission
               </h2>
-              <p className="text-lg text-white">
+              <p className="text-xl text-white">
                 Together, we can make a difference. Join us in our mission to
                 harness the power of hydrogen energy, creating a sustainable
                 legacy for generations to come. Let's build a future where
@@ -126,7 +126,7 @@ export default function CTA() {
               </p>
               <Link
                 to="/contact"
-                className="block w-full rounded-md border border-transparent bg-white px-5 py-3 text-center text-base font-medium text-emerald-700 shadow-md hover:bg-gray-50 sm:inline-block sm:w-auto"
+                className="block w-full rounded-md border border-transparent bg-custom-yellow px-5 py-3 text-center text-base font-medium text-white shadow-md hover:bg-gray-50 sm:inline-block sm:w-auto"
               >
                 Get in Contact
               </Link>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   BarChart,
   Bar,
@@ -58,7 +58,6 @@ const HydrogenProductionChart = ({ data }) => {
 
     setChartData(newChartData);
   }, [data, selectedYears, selectedTech]);
-
   const years = ["2019", "2020", "2021", "2022", "2023"];
   const technologies = ["AEC", "PEMEC", "SOEC"];
   const colors = {
@@ -70,40 +69,52 @@ const HydrogenProductionChart = ({ data }) => {
   };
 
   return (
-    <div>
-      <div>
-        {years.map((year) => (
-          <label key={year}>
-            <input
-              type="checkbox"
-              checked={selectedYears.includes(year)}
-              onChange={(e) => {
-                if (e.target.checked) {
-                  setSelectedYears([...selectedYears, year]);
-                } else {
-                  setSelectedYears(selectedYears.filter((y) => y !== year));
-                }
-              }}
-            />
-            {year}
-          </label>
-        ))}
-        {technologies.map((tech) => (
-          <label key={tech}>
-            <input
-              type="checkbox"
-              checked={selectedTech.includes(tech)}
-              onChange={(e) => {
-                if (e.target.checked) {
-                  setSelectedTech([...selectedTech, tech]);
-                } else {
-                  setSelectedTech(selectedTech.filter((t) => t !== tech));
-                }
-              }}
-            />
-            {tech}
-          </label>
-        ))}
+    <div className="space-y-4">
+      <div className="flex flex-wrap gap-4">
+        <div className="space-y-2">
+          <h3 className="font-medium">Years:</h3>
+          <div className="flex flex-wrap gap-2">
+            {years.map((year) => (
+              <label key={year} className="flex items-center">
+                <input
+                  type="checkbox"
+                  checked={selectedYears.includes(year)}
+                  onChange={(e) => {
+                    if (e.target.checked) {
+                      setSelectedYears([...selectedYears, year]);
+                    } else {
+                      setSelectedYears(selectedYears.filter((y) => y !== year));
+                    }
+                  }}
+                  className="mr-1"
+                />
+                <span>{year}</span>
+              </label>
+            ))}
+          </div>
+        </div>
+        <div className="space-y-2">
+          <h3 className="font-medium">Technologies:</h3>
+          <div className="flex flex-wrap gap-2">
+            {technologies.map((tech) => (
+              <label key={tech} className="flex items-center">
+                <input
+                  type="checkbox"
+                  checked={selectedTech.includes(tech)}
+                  onChange={(e) => {
+                    if (e.target.checked) {
+                      setSelectedTech([...selectedTech, tech]);
+                    } else {
+                      setSelectedTech(selectedTech.filter((t) => t !== tech));
+                    }
+                  }}
+                  className="mr-1"
+                />
+                <span>{tech}</span>
+              </label>
+            ))}
+          </div>
+        </div>
       </div>
       <ResponsiveContainer width="100%" height={400}>
         <BarChart data={chartData}>

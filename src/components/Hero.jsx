@@ -19,40 +19,7 @@ export default function Example() {
     <div className="bg-white">
       <header className="absolute inset-x-0 top-0 z-50">
         <div className="mx-auto max-w-7xl">
-          <div className="px-6 pt-6 lg:max-w-2xl lg:pl-8 lg:pr-0">
-            {/* <nav
-              aria-label="Global"
-              className="flex items-center justify-between lg:justify-start"
-            >
-              <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Hyre Energy</span>
-                <img
-                  alt="Your Company"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=emerald&shade=600"
-                  className="h-8 w-auto"
-                />
-              </a>
-              <button
-                type="button"
-                onClick={() => setMobileMenuOpen(true)}
-                className="-m-2.5 rounded-md p-2.5 text-gray-700 lg:hidden"
-              >
-                <span className="sr-only">Open main menu</span>
-                <Bars3Icon aria-hidden="true" className="h-6 w-6" />
-              </button>
-              <div className="hidden lg:ml-12 lg:flex lg:gap-x-14">
-                {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="text-sm font-semibold leading-6 text-gray-900"
-                  >
-                    {item.name}
-                  </a>
-                ))}
-              </div>
-            </nav> */}
-          </div>
+          <div className="px-6 pt-6 lg:max-w-2xl lg:pl-8 lg:pr-0"></div>
         </div>
         <Dialog
           open={mobileMenuOpen}
@@ -125,7 +92,7 @@ export default function Example() {
                     Pioneering a Sustainable Future with Hydrogen Energy{" "}
                     <a
                       href="#"
-                      className="whitespace-nowrap font-semibold text-emerald-600"
+                      className="whitespace-nowrap font-semibold text-custom-blue"
                     >
                       <span aria-hidden="true" className="absolute inset-0" />
                       Read more <span aria-hidden="true">&rarr;</span>
@@ -147,7 +114,7 @@ export default function Example() {
                 <div className="mt-10 flex items-center gap-x-6">
                   <Link
                     to="/contact"
-                    className="rounded-md bg-emerald-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
+                    className="rounded-md bg-custom-yellow px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-custom-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-custom-blue"
                   >
                     Get started
                   </Link>

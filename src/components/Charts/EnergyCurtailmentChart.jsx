@@ -20,7 +20,6 @@ const EnergyCurtailmentChart = ({ data }) => {
   ]);
   const [selectedResource, setSelectedResource] = useState("Total");
   const [chartData, setChartData] = useState([]);
-
   useEffect(() => {
     const months = [
       "January",
@@ -58,35 +57,41 @@ const EnergyCurtailmentChart = ({ data }) => {
   const colors = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd"];
 
   return (
-    <div>
-      <div>
-        <label>Resource: </label>
-        <select
-          value={selectedResource}
-          onChange={(e) => setSelectedResource(e.target.value)}
-        >
-          {resources.map((resource) => (
-            <option key={resource} value={resource}>
-              {resource}
-            </option>
+    <div className="space-y-4">
+      <div className="flex flex-wrap items-center gap-4">
+        <div className="flex items-center">
+          <label className="mr-2 font-medium">Resource:</label>
+          <select
+            value={selectedResource}
+            onChange={(e) => setSelectedResource(e.target.value)}
+            className="border rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-green-500"
+          >
+            {resources.map((resource) => (
+              <option key={resource} value={resource}>
+                {resource}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          {years.map((year) => (
+            <label key={year} className="flex items-center">
+              <input
+                type="checkbox"
+                checked={selectedYears.includes(year)}
+                onChange={(e) => {
+                  if (e.target.checked) {
+                    setSelectedYears([...selectedYears, year]);
+                  } else {
+                    setSelectedYears(selectedYears.filter((y) => y !== year));
+                  }
+                }}
+                className="mr-1"
+              />
+              <span>{year}</span>
+            </label>
           ))}
-        </select>
-        {years.map((year) => (
-          <label key={year}>
-            <input
-              type="checkbox"
-              checked={selectedYears.includes(year)}
-              onChange={(e) => {
-                if (e.target.checked) {
-                  setSelectedYears([...selectedYears, year]);
-                } else {
-                  setSelectedYears(selectedYears.filter((y) => y !== year));
-                }
-              }}
-            />
-            {year}
-          </label>
-        ))}
+        </div>
       </div>
       <ResponsiveContainer width="100%" height={400}>
         <BarChart data={chartData}>

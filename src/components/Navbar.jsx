@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import logo from "../assets/logo2.png";
+import logo from "../assets/logo.jpeg";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -30,7 +30,7 @@ export default function Navbar() {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   <img
-                    className="block h-8 w-auto"
+                    className="block h-16 w-auto"
                     src={logo}
                     alt="HyRe-Energy"
                   />
@@ -38,13 +38,13 @@ export default function Navbar() {
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                   {/* Navigation Links */}
                   <Link
-                    to="/home"
+                    to="/"
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium hover:border-gray-300 hover:text-gray-700"
                   >
                     Home
                   </Link>
                   <Link
-                    to="/"
+                    to="/about"
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium hover:border-gray-300 hover:text-gray-700"
                   >
                     About
@@ -80,7 +80,7 @@ export default function Navbar() {
                 to="/"
                 className="block text-base font-medium text-header-3 hover:text-zinc-100"
               >
-                About
+                Home
               </Disclosure.Button>
 
               <Disclosure.Button
