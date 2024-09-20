@@ -106,24 +106,6 @@ export default function Services() {
                       {post.description}
                     </p>
                   </div>
-                  {/* <div className="mt-6 flex border-t border-gray-900/5 pt-6">
-                    <div className="relative flex items-center gap-x-4">
-                      <img
-                        alt=""
-                        src={post.author.imageUrl}
-                        className="h-10 w-10 rounded-full bg-gray-50"
-                      />
-                      <div className="text-sm leading-6">
-                        <p className="font-semibold text-gray-900">
-                          <a href={post.author.href}>
-                            <span className="absolute inset-0" />
-                            {post.author.name}
-                          </a>
-                        </p>
-                        <p className="text-gray-600">{post.author.role}</p>
-                      </div>
-                    </div>
-                  </div> */}
                 </div>
               </article>
             ))}

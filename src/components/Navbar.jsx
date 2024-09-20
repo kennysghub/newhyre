@@ -38,6 +38,12 @@ export default function Navbar() {
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                   {/* Navigation Links */}
                   <Link
+                    to="/home"
+                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium hover:border-gray-300 hover:text-gray-700"
+                  >
+                    Home
+                  </Link>
+                  <Link
                     to="/"
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium hover:border-gray-300 hover:text-gray-700"
                   >

@@ -1,9 +1,7 @@
 import emissionsReductionImg from "../assets/emissions-reductions.jpg";
 import systemIntegrationImg from "../assets/system-integration.png";
 import stockImg from "../assets/stock-image.jpeg";
-// import techConsulting from "../assets/tech-consulting.jpg";
-// import systemIntegration from "../assets/system-integration.png";
-// import service1 from "../assets/service-1.jpg";
+
 
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";

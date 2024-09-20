@@ -5,36 +5,20 @@ import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import "./App.css";
 import About from "./pages/About";
-// import Mission from "./pages/Mission";
+
 import Services from "./pages/Services";
-import Main from "./pages/Main";
+
+import Home from "./pages/Home";
 export default function App() {
   return (
     <div>
       <>
         <Navbar />
         <Routes>
-          {/* <Route
-          path="/"
-          element={
-            <div>
-              <Hero />
-              <Testimonial />
-              <Stats />
-              <Team />
-              <References />
-              <CTA />
-            </div>
-          }
-        /> */}
-          {/* <Route path="/" element={<About />} /> */}
           <Route path="/" element={<About />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
-
-          {/* <Route path="/mission" element={<Mission />} /> */}
           <Route path="/services" element={<Services />} />
-
-          {/* Add other routes here */}
         </Routes>
         <Footer />
       </>

@@ -60,7 +60,7 @@ export default function Footer() {
           ))}
         </div>
         <p className="mt-10 text-center text-xs leading-5 text-header-3">
-          HyRe Energy LLC 2024
+          Hyre Energy LLC 2024
         </p>
       </div>
     </footer>

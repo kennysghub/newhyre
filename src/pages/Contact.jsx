@@ -282,23 +282,7 @@ export default function Contact() {
                   California
                 </dd>
               </div>
-              <div className="flex gap-x-4">
-                <dt className="flex-none">
-                  <span className="sr-only">Telephone</span>
-                  <PhoneIcon
-                    aria-hidden="true"
-                    className="h-7 w-6 text-gray-400"
-                  />
-                </dt>
-                <dd>
-                  <a
-                    href="tel: +1 (714) 335-7080"
-                    className="hover:text-gray-900"
-                  >
-                    +1 (714) 335-7080
-                  </a>
-                </dd>
-              </div>
+
               <div className="flex gap-x-4">
                 <dt className="flex-none">
                   <span className="sr-only">Email</span>
