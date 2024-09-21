@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import Select from "react-select";
 import {
   BarChart,
   Bar,
@@ -11,13 +12,11 @@ import {
 } from "recharts";
 
 const HydrogenProductionChart = ({ data }) => {
-  const [selectedYears, setSelectedYears] = useState([
-    "2019",
-    "2020",
-    "2021",
-    "2022",
-    "2023",
-  ]);
+  const years = ["2019", "2020", "2021", "2022", "2023"];
+  const yearOptions = years.map((year) => ({ value: year, label: year }));
+  const technologies = ["AEC", "PEMEC", "SOEC"];
+
+  const [selectedYears, setSelectedYears] = useState(yearOptions);
   const [selectedTech, setSelectedTech] = useState(["AEC", "PEMEC", "SOEC"]);
   const [chartData, setChartData] = useState([]);
 
@@ -42,9 +41,10 @@ const HydrogenProductionChart = ({ data }) => {
       SOEC: 0.0225,
     };
 
-    const newChartData = months.map((month, index) => {
+    const newChartData = months.map((month) => {
       const monthData = { month };
-      selectedYears.forEach((year) => {
+      selectedYears.forEach((yearOption) => {
+        const year = yearOption.value;
         const totalData = data.find((item) => item.Source === `Total${year}`);
         selectedTech.forEach((tech) => {
           const key = `Total${year}${tech}`;
@@ -58,8 +58,7 @@ const HydrogenProductionChart = ({ data }) => {
 
     setChartData(newChartData);
   }, [data, selectedYears, selectedTech]);
-  const years = ["2019", "2020", "2021", "2022", "2023"];
-  const technologies = ["AEC", "PEMEC", "SOEC"];
+
   const colors = {
     2019: ["#1f77b4", "#aec7e8", "#ff7f0e"],
     2020: ["#ffbb78", "#2ca02c", "#98df8a"],
@@ -71,27 +70,16 @@ const HydrogenProductionChart = ({ data }) => {
   return (
     <div className="space-y-4">
       <div className="flex flex-wrap gap-4">
-        <div className="space-y-2">
-          <h3 className="font-medium">Years:</h3>
-          <div className="flex flex-wrap gap-2">
-            {years.map((year) => (
-              <label key={year} className="flex items-center">
-                <input
-                  type="checkbox"
-                  checked={selectedYears.includes(year)}
-                  onChange={(e) => {
-                    if (e.target.checked) {
-                      setSelectedYears([...selectedYears, year]);
-                    } else {
-                      setSelectedYears(selectedYears.filter((y) => y !== year));
-                    }
-                  }}
-                  className="mr-1"
-                />
-                <span>{year}</span>
-              </label>
-            ))}
-          </div>
+        <div className="w-64">
+          <h3 className="font-medium mb-2">Years:</h3>
+          <Select
+            isMulti
+            options={yearOptions}
+            value={selectedYears}
+            onChange={setSelectedYears}
+            className="basic-multi-select"
+            classNamePrefix="select"
+          />
         </div>
         <div className="space-y-2">
           <h3 className="font-medium">Technologies:</h3>
@@ -117,22 +105,30 @@ const HydrogenProductionChart = ({ data }) => {
         </div>
       </div>
       <ResponsiveContainer width="100%" height={400}>
-        <BarChart data={chartData}>
+        <BarChart
+          data={chartData}
+          margin={{ top: 20, right: 30, left: 60, bottom: 5 }}
+        >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="month" />
           <YAxis
-            label={{ value: "H2 [tons]", angle: -90, position: "insideLeft" }}
+            label={{
+              value: "H2 [tons]",
+              angle: -90,
+              position: "insideLeft",
+              offset: -50,
+            }}
           />
           <Tooltip />
           <Legend />
-          {selectedYears.flatMap((year, yearIndex) =>
-            selectedTech.map((tech, techIndex) => (
+          {selectedYears.flatMap((yearOption) =>
+            selectedTech.map((tech) => (
               <Bar
-                key={`${year}${tech}`}
-                dataKey={`Total${year}${tech}`}
-                name={`${year} ${tech}`}
-                fill={colors[year][technologies.indexOf(tech)]}
-                stackId={year}
+                key={`${yearOption.value}${tech}`}
+                dataKey={`Total${yearOption.value}${tech}`}
+                name={`${yearOption.value} ${tech}`}
+                fill={colors[yearOption.value][technologies.indexOf(tech)]}
+                stackId={yearOption.value}
               />
             ))
           )}
