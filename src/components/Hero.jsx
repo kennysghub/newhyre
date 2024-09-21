@@ -12,7 +12,7 @@ const navigation = [
   { name: "Contact", href: "/contact" },
 ];
 
-export default function Example() {
+const Hero = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -92,14 +92,14 @@ export default function Example() {
                     Pioneering a Sustainable Future with Hydrogen Energy{" "}
                     <a
                       href="#"
-                      className="whitespace-nowrap font-semibold text-custom-blue"
+                      className="whitespace-nowrap font-semibold text-custom-yellow"
                     >
                       <span aria-hidden="true" className="absolute inset-0" />
                       Read more <span aria-hidden="true">&rarr;</span>
                     </a>
                   </div>
                 </div>
-                <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                <h1 className="text-4xl font-bold tracking-tight text-custom-blue sm:text-6xl">
                   Experienced experts in hydrogen produced via renewable
                   electrolysis
                 </h1>
@@ -139,4 +139,6 @@ export default function Example() {
       </div>
     </div>
   );
-}
+};
+
+export default Hero;

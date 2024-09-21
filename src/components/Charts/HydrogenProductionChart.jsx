@@ -9,7 +9,9 @@ import {
   Tooltip,
   Legend,
   ResponsiveContainer,
+  Cell,
 } from "recharts";
+import { motion } from "framer-motion";
 
 const HydrogenProductionChart = ({ data }) => {
   const years = ["2019", "2020", "2021", "2022", "2023"];
@@ -19,6 +21,7 @@ const HydrogenProductionChart = ({ data }) => {
   const [selectedYears, setSelectedYears] = useState(yearOptions);
   const [selectedTech, setSelectedTech] = useState(["AEC", "PEMEC", "SOEC"]);
   const [chartData, setChartData] = useState([]);
+  const [hoveredBar, setHoveredBar] = useState(null);
 
   useEffect(() => {
     const months = [
@@ -60,15 +63,36 @@ const HydrogenProductionChart = ({ data }) => {
   }, [data, selectedYears, selectedTech]);
 
   const colors = {
-    2019: ["#1f77b4", "#aec7e8", "#ff7f0e"],
-    2020: ["#ffbb78", "#2ca02c", "#98df8a"],
-    2021: ["#d62728", "#ff9896", "#9467bd"],
-    2022: ["#c5b0d5", "#8c564b", "#c49c94"],
-    2023: ["#e377c2", "#f7b6d2", "#7f7f7f"],
+    2019: ["#3498db", "#2980b9", "#1abc9c"],
+    2020: ["#e74c3c", "#c0392b", "#d35400"],
+    2021: ["#f1c40f", "#f39c12", "#e67e22"],
+    2022: ["#9b59b6", "#8e44ad", "#2c3e50"],
+    2023: ["#1abc9c", "#16a085", "#27ae60"],
+  };
+
+  const CustomTooltip = ({ active, payload, label }) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="bg-white p-4 rounded shadow-lg border border-gray-200">
+          <p className="font-bold">{label}</p>
+          {payload.map((entry, index) => (
+            <p key={index} style={{ color: entry.fill }}>
+              {`${entry.name}: ${entry.value.toFixed(2)} tons`}
+            </p>
+          ))}
+        </div>
+      );
+    }
+    return null;
   };
 
   return (
-    <div className="space-y-4">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="space-y-4 p-6 bg-gray-100 rounded-lg shadow-md"
+    >
       <div className="flex flex-wrap gap-4">
         <div className="w-64">
           <h3 className="font-medium mb-2">Years:</h3>
@@ -96,7 +120,7 @@ const HydrogenProductionChart = ({ data }) => {
                       setSelectedTech(selectedTech.filter((t) => t !== tech));
                     }
                   }}
-                  className="mr-1"
+                  className="mr-1 text-custom-blue"
                 />
                 <span>{tech}</span>
               </label>
@@ -104,22 +128,24 @@ const HydrogenProductionChart = ({ data }) => {
           </div>
         </div>
       </div>
-      <ResponsiveContainer width="100%" height={400}>
+      <ResponsiveContainer width="100%" height={500}>
         <BarChart
           data={chartData}
           margin={{ top: 20, right: 30, left: 60, bottom: 5 }}
         >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="month" />
+          <CartesianGrid strokeDasharray="3 3" stroke="#ccc" />
+          <XAxis dataKey="month" tick={{ fill: "#666" }} />
           <YAxis
             label={{
               value: "H2 [tons]",
               angle: -90,
               position: "insideLeft",
               offset: -50,
+              fill: "#666",
             }}
+            tick={{ fill: "#666" }}
           />
-          <Tooltip />
+          <Tooltip content={<CustomTooltip />} />
           <Legend />
           {selectedYears.flatMap((yearOption) =>
             selectedTech.map((tech) => (
@@ -127,14 +153,25 @@ const HydrogenProductionChart = ({ data }) => {
                 key={`${yearOption.value}${tech}`}
                 dataKey={`Total${yearOption.value}${tech}`}
                 name={`${yearOption.value} ${tech}`}
-                fill={colors[yearOption.value][technologies.indexOf(tech)]}
                 stackId={yearOption.value}
-              />
+                onMouseEnter={() => setHoveredBar(`${yearOption.value}${tech}`)}
+                onMouseLeave={() => setHoveredBar(null)}
+              >
+                {chartData.map((entry, index) => (
+                  <Cell
+                    key={`cell-${index}`}
+                    fill={colors[yearOption.value][technologies.indexOf(tech)]}
+                    opacity={
+                      hoveredBar === `${yearOption.value}${tech}` ? 1 : 0.7
+                    }
+                  />
+                ))}
+              </Bar>
             ))
           )}
         </BarChart>
       </ResponsiveContainer>
-    </div>
+    </motion.div>
   );
 };
 
