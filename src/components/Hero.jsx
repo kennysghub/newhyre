@@ -88,20 +88,12 @@ const Hero = () => {
             <div className="relative px-6 py-32 sm:py-40 lg:px-8 lg:py-56 lg:pr-0">
               <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
                 <div className="hidden sm:mb-10 sm:flex">
-                  <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-500 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                  <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-500 ring-1 ring-gray-900/10">
                     Pioneering a Sustainable Future with Hydrogen Energy{" "}
-                    <a
-                      href="#"
-                      className="whitespace-nowrap font-semibold text-custom-yellow"
-                    >
-                      <span aria-hidden="true" className="absolute inset-0" />
-                      Read more <span aria-hidden="true">&rarr;</span>
-                    </a>
                   </div>
                 </div>
                 <h1 className="text-4xl font-bold tracking-tight text-custom-blue sm:text-6xl">
-                  Experienced experts in hydrogen produced via renewable
-                  electrolysis
+                  Experts in hydrogen produced via renewable electrolysis
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-gray-600">
                   Our journey is fueled by innovation. We are constantly

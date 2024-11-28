@@ -1,4 +1,8 @@
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from "@heroicons/react/20/solid";
+import {
+  CloudArrowUpIcon,
+  LockClosedIcon,
+  ServerIcon,
+} from "@heroicons/react/20/solid";
 
 export default function Testimonial() {
   return (
@@ -45,8 +49,8 @@ export default function Testimonial() {
                 Sustainable Hydrogen Solutions
               </h1>
               <p className="mt-6 text-xl leading-8 text-gray-700">
-                Our mission is to lead the hydrogen revolution, developing state-of-the-art
-                solutions for a sustainable future.
+                Our mission is to lead the hydrogen revolution, developing
+                state-of-the-art solutions for a sustainable future.
               </p>
             </div>
           </div>
@@ -62,9 +66,10 @@ export default function Testimonial() {
           <div className="lg:pr-4">
             <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
               <p>
-                Hydrogen has emerged as a formidable contender in the race to develop sustainable
-                energy solutions. Sourced from water through electrolysis, it serves as a clean,
-                renewable energy carrier that can replace fossil fuels in numerous applications.
+                Hydrogen has emerged as a formidable contender in the race to
+                develop sustainable energy solutions. Sourced from water through
+                electrolysis, it serves as a clean, renewable energy carrier
+                that can replace fossil fuels in numerous applications.
               </p>
               <ul role="list" className="mt-8 space-y-8 text-gray-600">
                 <li className="flex gap-x-3">
@@ -73,8 +78,11 @@ export default function Testimonial() {
                     aria-hidden="true"
                   />
                   <span>
-                    <strong className="font-semibold text-gray-900">Efficient Production.</strong>{" "}
-                    Utilizing the latest electrolysis techniques for high yield and purity.
+                    <strong className="font-semibold text-gray-900">
+                      Efficient Production.
+                    </strong>{" "}
+                    Utilizing the latest electrolysis techniques for high yield
+                    and purity.
                   </span>
                 </li>
                 <li className="flex gap-x-3">
@@ -83,8 +91,11 @@ export default function Testimonial() {
                     aria-hidden="true"
                   />
                   <span>
-                    <strong className="font-semibold text-gray-900">Zero Emissions.</strong>{" "}
-                    Carbon-free hydrogen production supporting global climate goals.
+                    <strong className="font-semibold text-gray-900">
+                      Zero Emissions.
+                    </strong>{" "}
+                    Carbon-free hydrogen production supporting global climate
+                    goals.
                   </span>
                 </li>
                 <li className="flex gap-x-3">
@@ -93,26 +104,30 @@ export default function Testimonial() {
                     aria-hidden="true"
                   />
                   <span>
-                    <strong className="font-semibold text-gray-900">Global Reach.</strong> Serving
-                    multiple sectors across various countries.
+                    <strong className="font-semibold text-gray-900">
+                      Global Reach.
+                    </strong>{" "}
+                    Serving multiple sectors across various countries.
                   </span>
                 </li>
               </ul>
               <p className="mt-8">
-                The transportation sector stands to benefit significantly from hydrogen energy.
-                Hydrogen-powered fuel cells in electric vehicles (EVs) offer higher energy density
-                compared to lithium-ion batteries, translating to longer range and shorter refueling
-                times. This positions hydrogen as a key player in the decarbonization of the
-                automotive industry.
+                The transportation sector stands to benefit significantly from
+                hydrogen energy. Hydrogen-powered fuel cells in electric
+                vehicles (EVs) offer higher energy density compared to
+                lithium-ion batteries, translating to longer range and shorter
+                refueling times. This positions hydrogen as a key player in the
+                decarbonization of the automotive industry.
               </p>
               <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">
                 Hydrogen's Versatility Across Industries
               </h2>
               <p className="mt-6">
-                One of the most compelling advantages of hydrogen is its versatility. It can serve
-                as a raw material in industrial processes, a heating source, and a medium for
-                electricity storage and transportation. This multi-faceted utility makes hydrogen
-                indispensable in the transition to a circular economy.
+                One of the most compelling advantages of hydrogen is its
+                versatility. It can serve as a raw material in industrial
+                processes, a heating source, and a medium for electricity
+                storage and transportation. This multi-faceted utility makes
+                hydrogen indispensable in the transition to a circular economy.
               </p>
             </div>
           </div>

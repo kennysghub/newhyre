@@ -54,7 +54,10 @@ export default function Services() {
           >
             Hyre Energy Services
           </motion.h2>
-          <motion.p className="mt-4 text-gray-500" variants={fadeInUp}>
+          <motion.p
+            className="mt-4 text-custom-yellow text-2xl"
+            variants={fadeInUp}
+          >
             We pride ourselves on offering 3 exclusive services that we view as
             necessary for the adoption of hydrogen energy systems.
           </motion.p>
