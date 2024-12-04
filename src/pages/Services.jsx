@@ -1,119 +1,234 @@
-import { motion } from "framer-motion";
-import emissionsReductionImg from "../assets/emissions-reductions.jpg";
-import systemIntegrationImg from "../assets/system-integration.png";
-import stockImg from "../assets/stock-image.jpeg";
+import { Link } from "react-router-dom";
+import { ClipboardList, LineChart, Lightbulb, ArrowRight } from "lucide-react";
 
-const features = [
-  {
-    name: "Integration Support and Project Management",
-    description:
-      "Hydrogen projects involve new and constantly emerging technologies that require a fundamental knowledge to safely operate and maintain. The integration of these emerging technologies with established technologies, such as balance of plant equipment, is not often available through the technology manufacturers. There is no one-stop, turn-key solution because of site specific requirements and countless combinations of technologies to achieve a certain end goal. Hydrogen projects would normally require multiple expensive engineering companies, but we can streamline the process of outsourcing specific jobs. We can integrate and manage all the technologies unique to a hydrogen project including but not limited to PEM fuel cells and elctrolyzers, alkaline electrolyzers, solid-oxide fuel cells and electrolyzers, air-cooled chillers, cooling towers, hydrogen compressors, gaseous hydrogen storage.",
-    imageSrc: systemIntegrationImg,
-    imageAlt:
-      "White canvas laptop sleeve with gray felt interior, silver zipper, and tan leather zipper pull.",
-  },
-  {
-    name: "Emissions Reduction Planning",
-    description:
-      "We understand that hydrogen can be used in many unique applications, and we want to help unlock the true potential of hydrogen. The potential is massive because it can be used in numerous sectors including the industrial, transportation, and power sectors. There is a need for an emissions free feedstock gas to be used in industrial processes such as cement, steel, and ammonia production. There is a need for an emissions free fuel for light-duty and heavy-duty vehicles. There is a need for emissions free electricity generation. Every application can benefit from the use of hydrogen, and we can contribute to a growing hydrogen market. If you are affiliated with any of the previously mentioned sectors, we can help develop your hydrogen project to reduce emissions.",
-    imageSrc: emissionsReductionImg,
-    imageAlt: "Detail of zipper pull with tan leather and silver rivet.",
-  },
-  {
-    name: "Technology Consulting: Customized Solutions and Advisory Services",
-    description:
-      "The commercialized market of hydrogen technologies is always evolving. We can provide scientific advice on new hydrogen technology to de-risk an investment . Additionally, no one hydrogen project will be the same because different sites have different requirements and end goals. We can advise on hydrogen project proposals and offer step-by-step guidance to achieve your overall business goals.",
-    imageSrc: stockImg,
-    imageAlt: "Detail of zipper pull with tan leather and silver rivet.",
-  },
-];
+const Button = ({ children, className, ...props }) => (
+  <button
+    className={`px-4 py-2 rounded font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 ${className}`}
+    {...props}
+  >
+    {children}
+  </button>
+);
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
+const Card = ({ children, className, ...props }) => (
+  <div
+    className={`bg-white rounded-lg shadow-md overflow-hidden ${className}`}
+    {...props}
+  >
+    {children}
+  </div>
+);
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 },
-};
+const CardHeader = ({ children, className, ...props }) => (
+  <div className={`p-4 ${className}`} {...props}>
+    {children}
+  </div>
+);
 
-export default function Services() {
+const CardContent = ({ children, className, ...props }) => (
+  <div className={`p-4 ${className}`} {...props}>
+    {children}
+  </div>
+);
+
+const CardFooter = ({ children, className, ...props }) => (
+  <div className={`p-4 border-t ${className}`} {...props}>
+    {children}
+  </div>
+);
+
+export default function ServicesPage() {
   return (
-    <div className="bg-white">
-      <div className="mx-auto max-w-2xl px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
-        <motion.div
-          className="mx-auto max-w-3xl text-center"
-          initial="initial"
-          animate="animate"
-          variants={fadeInUp}
-        >
-          <motion.h2
-            className="text-3xl font-bold tracking-tight text-custom-blue sm:text-4xl"
-            variants={fadeInUp}
-          >
-            Hyre Energy Services
-          </motion.h2>
-          <motion.p
-            className="mt-4 text-custom-yellow text-2xl"
-            variants={fadeInUp}
-          >
-            We pride ourselves on offering 3 exclusive services that we view as
-            necessary for the adoption of hydrogen energy systems.
-          </motion.p>
-        </motion.div>
+    <div className="flex flex-col min-h-screen">
+      <main className="flex-1">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-blue-50 via-green-50 to-yellow-50">
+          <div className="container px-4 md:px-6 mx-auto">
+            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl mb-8">
+              Our Services
+            </h1>
+            <p className="max-w-[700px] text-gray-700 md:text-xl lg:text-base xl:text-xl mb-12">
+              At Hyre Energy LLC we pride ourselves on offering three exclusive
+              services that we view as necessary for the adoption of hydrogen
+              energy systems. Explore our services below to see how we can help
+              your business reduce emissions and join the clean energy
+              revolution.
+            </p>
+            <div className="grid gap-6 lg:grid-cols-3">
+              <Card className="flex flex-col">
+                <CardHeader>
+                  <div className="flex items-center space-x-4">
+                    <ClipboardList className="w-8 h-8 text-blue-600" />
+                    <h3 className="text-xl font-bold">
+                      Integration Support and Project Management
+                    </h3>
+                  </div>
+                  <p className="text-sm text-gray-500">
+                    Comprehensive project oversight and implementation
+                  </p>
+                </CardHeader>
+                <CardContent className="flex-1 space-y-4">
+                  <div className="relative aspect-video w-full overflow-hidden rounded-lg">
+                    <img
+                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/integration%20support%20and%20project%20management.jpg-8xjG6Nupe1dPFiV736arcjBQ1Rc07D.jpeg"
+                      alt="Team collaborating on project management"
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                  <ul className="list-disc list-inside space-y-2 text-sm text-gray-600">
+                    <li>End-to-end project coordination</li>
+                    <li>System integration expertise</li>
+                    <li>Timeline and resource management</li>
+                    <li>Stakeholder communication</li>
+                  </ul>
+                </CardContent>
+                <CardFooter>
+                  <Link to="/services/integration-support" className="w-full">
+                    <Button className="w-full bg-black text-white hover:bg-blue-700">
+                      Learn More
+                      <ArrowRight className="w-4 h-4 ml-2 inline" />
+                    </Button>
+                  </Link>
+                </CardFooter>
+              </Card>
 
-        <motion.div className="mt-16 space-y-16">
-          {features.map((feature, featureIdx) => (
-            <motion.div
-              key={feature.name}
-              className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.6, delay: featureIdx * 0.2 }}
-            >
-              <motion.div
-                className={classNames(
-                  featureIdx % 2 === 0
-                    ? "lg:col-start-1"
-                    : "lg:col-start-8 xl:col-start-9",
-                  "mt-6 lg:col-span-5 lg:row-start-1 lg:mt-0 xl:col-span-4"
-                )}
-                variants={fadeInUp}
-              >
-                <h3 className="text-lg font-medium text-custom-yellow">
-                  {feature.name}
-                </h3>
-                <p className="mt-2 text-lg text-gray-500">
-                  {feature.description}
+              <Card className="flex flex-col">
+                <CardHeader>
+                  <div className="flex items-center space-x-4">
+                    <LineChart className="w-8 h-8 text-green-600" />
+                    <h3 className="text-xl font-bold">
+                      Emissions Reduction Planning
+                    </h3>
+                  </div>
+                  <p className="text-sm text-gray-500">
+                    Strategic pathways to lower emissions
+                  </p>
+                </CardHeader>
+                <CardContent className="flex-1 space-y-4">
+                  <div className="relative aspect-video w-full overflow-hidden rounded-lg">
+                    <img
+                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Emissions%20reductions.jpg-EwN7gOWxh0dD6uiXrnK2FcvBsPg6Fs.jpeg"
+                      alt="Industrial emissions and clean energy symbolism"
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                  <ul className="list-disc list-inside space-y-2 text-sm text-gray-600">
+                    <li>Comprehensive emissions assessment</li>
+                    <li>Reduction strategy development</li>
+                    <li>Implementation roadmap creation</li>
+                    <li>Progress monitoring and reporting</li>
+                  </ul>
+                </CardContent>
+                <CardFooter>
+                  <Link to="/services/emissions-reduction" className="w-full">
+                    <Button className="w-full bg-black text-white hover:bg-blue-700">
+                      Learn More
+                      <ArrowRight className="w-4 h-4 ml-2 inline" />
+                    </Button>
+                  </Link>
+                </CardFooter>
+              </Card>
+
+              <Card className="flex flex-col">
+                <CardHeader>
+                  <div className="flex items-center space-x-4">
+                    <Lightbulb className="w-8 h-8 text-yellow-600" />
+                    <h3 className="text-xl font-bold">Technology Consulting</h3>
+                  </div>
+                  <p className="text-sm text-gray-500">
+                    Expert guidance on hydrogen solutions
+                  </p>
+                </CardHeader>
+                <CardContent className="flex-1 space-y-4">
+                  <div className="relative aspect-video w-full overflow-hidden rounded-lg">
+                    <img
+                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tech%20consulting.jpg-DlaZEjMyMAfv0lv9KlCaFTwPqUlekh.jpeg"
+                      alt="Technical consulting and blueprint review"
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                  <ul className="list-disc list-inside space-y-2 text-sm text-gray-600">
+                    <li>Technical feasibility studies</li>
+                    <li>System design optimization</li>
+                    <li>Technology selection support</li>
+                    <li>Performance analysis</li>
+                  </ul>
+                </CardContent>
+                <CardFooter>
+                  <Link to="/services/technology-consulting" className="w-full">
+                    <Button className="w-full bg-black text-white hover:bg-blue-700">
+                      Learn More
+                      <ArrowRight className="w-4 h-4 ml-2 inline" />
+                    </Button>
+                  </Link>
+                </CardFooter>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
+          <div className="container px-4 md:px-6 mx-auto">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl mb-8">
+              Why Choose Hyre Energy?
+            </h2>
+            <div className="grid gap-6 lg:grid-cols-2">
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold">Expertise</h3>
+                <p className="text-gray-600">
+                  Our team of experts brings years of experience in hydrogen
+                  technology, renewable energy, and industrial processes. We
+                  stay at the forefront of innovation to deliver cutting-edge
+                  solutions.
                 </p>
-              </motion.div>
-              <motion.div
-                className={classNames(
-                  featureIdx % 2 === 0
-                    ? "lg:col-start-6 xl:col-start-5"
-                    : "lg:col-start-1",
-                  "flex-auto lg:col-span-7 lg:row-start-1 xl:col-span-8"
-                )}
-                variants={fadeInUp}
-              >
-                <motion.div
-                  className="aspect-h-2 aspect-w-5 overflow-hidden rounded-lg bg-gray-100 shadow-2xl"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <img
-                    alt={feature.imageAlt}
-                    src={feature.imageSrc}
-                    className="custom-img object-cover w-full h-full rounded-xl"
-                  />
-                </motion.div>
-              </motion.div>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold">Customized Solutions</h3>
+                <p className="text-gray-600">
+                  We understand that every business is unique. That's why we
+                  work closely with you to develop tailored hydrogen solutions
+                  that meet your specific needs and goals.
+                </p>
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold">Sustainability Focus</h3>
+                <p className="text-gray-600">
+                  Our commitment to sustainability drives everything we do. By
+                  choosing Hyre Energy, you're partnering with a company
+                  dedicated to reducing emissions and creating a cleaner future.
+                </p>
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold">End-to-End Support</h3>
+                <p className="text-gray-600">
+                  From initial consultation to implementation and ongoing
+                  support, we're with you every step of the way. Our
+                  comprehensive approach ensures the success of your hydrogen
+                  initiatives.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
+          <div className="container px-4 md:px-6 mx-auto text-center">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl mb-8">
+              Ready to Transform Your Energy Future?
+            </h2>
+            <p className="max-w-[700px] mx-auto text-gray-700 md:text-xl lg:text-base xl:text-xl mb-12">
+              Take the first step towards a sustainable, hydrogen-powered future
+              for your business. Contact us today to discuss how Hyre Energy can
+              help you achieve your energy goals.
+            </p>
+            <Link to="/contact">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-6 py-3">
+                Get in Touch
+                <ArrowRight className="w-5 h-5 ml-2 inline" />
+              </Button>
+            </Link>
+          </div>
+        </section>
+      </main>
     </div>
   );
 }

@@ -5,6 +5,10 @@ import Navbar from "./components/Navbar";
 import "./App.css";
 import About from "./pages/About";
 import Services from "./pages/Services";
+import IntegrationSupport from "./pages/services/IntegrationSupport";
+import EmissionsReduction from "./pages/services/EmissionsReduction";
+import TechnologyConsulting from "./pages/services/TechnologyConsulting";
+
 import Home from "./pages/Home";
 
 export default function App() {
@@ -20,7 +24,15 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/services" element={<Services />} />
+        <Route path="/services">
+          <Route index element={<Services />} />
+          <Route path="integration-support" element={<IntegrationSupport />} />
+          <Route path="emissions-reduction" element={<EmissionsReduction />} />
+          <Route
+            path="technology-consulting"
+            element={<TechnologyConsulting />}
+          />
+        </Route>
       </Routes>
 
       <Footer />
