@@ -1,4 +1,21 @@
 import { Link } from "react-router-dom";
+import React from "react";
+import { motion, useInView } from "framer-motion";
+const Section = ({ children }) => {
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
 const Icon = ({ name }) => {
   const icons = {
@@ -171,172 +188,181 @@ export default function TechnologyConsultingPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-blue-50 via-green-50 to-yellow-50">
-          <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-            <div className="flex flex-col items-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+        <Section>
+          <section className="w-full pt-20 pb-12 md:pt-24 md:pb-24 lg:pt-32 lg:pb-32 bg-gradient-to-br from-blue-600 via-blue-500 to-green-400">
+            <div className="container mx-auto max-w-7xl px-4 md:px-6">
+              <div className="flex flex-col items-center text-center space-y-4">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white">
                   Technology Consulting
                 </h1>
-                <p className="mx-auto max-w-[700px] text-gray-700 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-[700px] text-blue-100 md:text-xl font-bold">
                   Expert guidance on hydrogen technologies for your business
                   success
                 </p>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </Section>
 
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
-          <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-            <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
-              <div className="space-y-4">
-                <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">
-                  Navigating the Evolving Hydrogen Market
-                </h2>
-                <p className="text-gray-600">
-                  The commercialized market of hydrogen technologies is always
-                  evolving. We can provide scientific advice on new hydrogen
-                  technology to de-risk an investment. Additionally, no two
-                  hydrogen projects will be the same because different sites
-                  have different requirements and end goals.
-                </p>
-                <p className="text-gray-600">
-                  We can advise on hydrogen project proposals and offer
-                  step-by-step guidance to achieve your overall business goals.
-                </p>
+        <Section>
+          <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
+            <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+              <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">
+                    Navigating the Evolving Hydrogen Market
+                  </h2>
+                  <p className="text-gray-600">
+                    The commercialized market of hydrogen technologies is always
+                    evolving. We can provide scientific advice on new hydrogen
+                    technology to de-risk an investment. Additionally, no two
+                    hydrogen projects will be the same because different sites
+                    have different requirements and end goals.
+                  </p>
+                  <p className="text-gray-600">
+                    We can advise on hydrogen project proposals and offer
+                    step-by-step guidance to achieve your overall business
+                    goals.
+                  </p>
+                </div>
+                <div className="relative aspect-video overflow-hidden rounded-xl">
+                  <img
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tech%20consulting.jpg-DlaZEjMyMAfv0lv9KlCaFTwPqUlekh.jpeg"
+                    alt="Technical consulting and blueprint review"
+                    className="object-cover w-full h-full"
+                  />
+                </div>
               </div>
-              <div className="relative aspect-video overflow-hidden rounded-xl">
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tech%20consulting.jpg-DlaZEjMyMAfv0lv9KlCaFTwPqUlekh.jpeg"
-                  alt="Technical consulting and blueprint review"
-                  className="object-cover w-full h-full"
-                />
+            </div>
+          </section>
+        </Section>
+
+        <Section>
+          <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
+            <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none mb-12 text-center">
+                Our Technology Consulting Services
+              </h2>
+              <div className="grid gap-6 lg:grid-cols-3">
+                <Card>
+                  <div className="mb-4 text-yellow-600">
+                    <Icon name="Search" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2">
+                    Technology Assessment
+                  </h3>
+                  <ul className="list-disc list-inside space-y-2 text-gray-600">
+                    <li>Evaluation of emerging hydrogen technologies</li>
+                    <li>Risk assessment for new investments</li>
+                    <li>Comparative analysis of available solutions</li>
+                    <li>Performance benchmarking</li>
+                  </ul>
+                </Card>
+                <Card>
+                  <div className="mb-4 text-yellow-600">
+                    <Icon name="FileText" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2">
+                    Project Proposal Review
+                  </h3>
+                  <ul className="list-disc list-inside space-y-2 text-gray-600">
+                    <li>Detailed analysis of project proposals</li>
+                    <li>Feasibility studies</li>
+                    <li>Technical and economic viability assessment</li>
+                    <li>Recommendations for optimization</li>
+                  </ul>
+                </Card>
+                <Card>
+                  <div className="mb-4 text-yellow-600">
+                    <Icon name="Cog" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2">
+                    Implementation Guidance
+                  </h3>
+                  <ul className="list-disc list-inside space-y-2 text-gray-600">
+                    <li>Step-by-step project implementation plans</li>
+                    <li>Technical support during deployment</li>
+                    <li>Performance monitoring and optimization</li>
+                    <li>Ongoing consultation and troubleshooting</li>
+                  </ul>
+                </Card>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </Section>
 
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
-          <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none mb-12 text-center">
-              Our Technology Consulting Services
-            </h2>
-            <div className="grid gap-6 lg:grid-cols-3">
-              <Card>
-                <div className="mb-4 text-yellow-600">
-                  <Icon name="Search" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2">
-                  Technology Assessment
-                </h3>
-                <ul className="list-disc list-inside space-y-2 text-gray-600">
-                  <li>Evaluation of emerging hydrogen technologies</li>
-                  <li>Risk assessment for new investments</li>
-                  <li>Comparative analysis of available solutions</li>
-                  <li>Performance benchmarking</li>
-                </ul>
-              </Card>
-              <Card>
-                <div className="mb-4 text-yellow-600">
-                  <Icon name="FileText" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2">
-                  Project Proposal Review
-                </h3>
-                <ul className="list-disc list-inside space-y-2 text-gray-600">
-                  <li>Detailed analysis of project proposals</li>
-                  <li>Feasibility studies</li>
-                  <li>Technical and economic viability assessment</li>
-                  <li>Recommendations for optimization</li>
-                </ul>
-              </Card>
-              <Card>
-                <div className="mb-4 text-yellow-600">
-                  <Icon name="Cog" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2">
-                  Implementation Guidance
-                </h3>
-                <ul className="list-disc list-inside space-y-2 text-gray-600">
-                  <li>Step-by-step project implementation plans</li>
-                  <li>Technical support during deployment</li>
-                  <li>Performance monitoring and optimization</li>
-                  <li>Ongoing consultation and troubleshooting</li>
-                </ul>
-              </Card>
+        <Section>
+          <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
+            <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none mb-12 text-center">
+                Our Consulting Approach
+              </h2>
+              <div className="grid gap-6 lg:grid-cols-4">
+                <Card>
+                  <div className="mb-4 text-yellow-600">
+                    <Icon name="Search" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2">Understand</h3>
+                  <p className="text-gray-600">
+                    We begin by thoroughly understanding your business goals and
+                    project requirements.
+                  </p>
+                </Card>
+                <Card>
+                  <div className="mb-4 text-yellow-600">
+                    <Icon name="BarChart2" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2">Analyze</h3>
+                  <p className="text-gray-600">
+                    Our experts analyze the latest hydrogen technologies and
+                    their applicability to your project.
+                  </p>
+                </Card>
+                <Card>
+                  <div className="mb-4 text-yellow-600">
+                    <Icon name="MessageCircle" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2">Advise</h3>
+                  <p className="text-gray-600">
+                    We provide tailored recommendations and strategies based on
+                    our analysis.
+                  </p>
+                </Card>
+                <Card>
+                  <div className="mb-4 text-yellow-600">
+                    <Icon name="LifeBuoy" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2">Support</h3>
+                  <p className="text-gray-600">
+                    We offer ongoing support and guidance throughout your
+                    project's lifecycle.
+                  </p>
+                </Card>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </Section>
 
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
-          <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none mb-12 text-center">
-              Our Consulting Approach
-            </h2>
-            <div className="grid gap-6 lg:grid-cols-4">
-              <Card>
-                <div className="mb-4 text-yellow-600">
-                  <Icon name="Search" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Understand</h3>
-                <p className="text-gray-600">
-                  We begin by thoroughly understanding your business goals and
-                  project requirements.
-                </p>
-              </Card>
-              <Card>
-                <div className="mb-4 text-yellow-600">
-                  <Icon name="BarChart2" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Analyze</h3>
-                <p className="text-gray-600">
-                  Our experts analyze the latest hydrogen technologies and their
-                  applicability to your project.
-                </p>
-              </Card>
-              <Card>
-                <div className="mb-4 text-yellow-600">
-                  <Icon name="MessageCircle" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Advise</h3>
-                <p className="text-gray-600">
-                  We provide tailored recommendations and strategies based on
-                  our analysis.
-                </p>
-              </Card>
-              <Card>
-                <div className="mb-4 text-yellow-600">
-                  <Icon name="LifeBuoy" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Support</h3>
-                <p className="text-gray-600">
-                  We offer ongoing support and guidance throughout your
-                  project's lifecycle.
-                </p>
-              </Card>
+        <Section>
+          <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
+            <div className="container mx-auto px-4 md:px-6 max-w-7xl text-center">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none mb-8">
+                Ready to Leverage Our Expertise?
+              </h2>
+              <p className="max-w-[700px] mx-auto text-gray-700 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed mb-12">
+                Let us guide you through the complexities of hydrogen technology
+                implementation. Contact us today to discuss how our consulting
+                services can support your hydrogen initiatives.
+              </p>
+              <Link to="/contact">
+                <button className="bg-yellow-600 hover:bg-yellow-700 text-white py-2 px-4 rounded inline-flex items-center">
+                  Get in Touch
+                  <Icon name="ArrowRight" className="w-4 h-4 ml-2" />
+                </button>
+              </Link>
             </div>
-          </div>
-        </section>
-
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
-          <div className="container mx-auto px-4 md:px-6 max-w-7xl text-center">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none mb-8">
-              Ready to Leverage Our Expertise?
-            </h2>
-            <p className="max-w-[700px] mx-auto text-gray-700 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed mb-12">
-              Let us guide you through the complexities of hydrogen technology
-              implementation. Contact us today to discuss how our consulting
-              services can support your hydrogen initiatives.
-            </p>
-            <Link to="/contact">
-              <button className="bg-yellow-600 hover:bg-yellow-700 text-white py-2 px-4 rounded inline-flex items-center">
-                Get in Touch
-                <Icon name="ArrowRight" className="w-4 h-4 ml-2" />
-              </button>
-            </Link>
-          </div>
-        </section>
+          </section>
+        </Section>
       </main>
     </div>
   );

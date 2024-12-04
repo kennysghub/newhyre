@@ -8,8 +8,8 @@ import Services from "./pages/Services";
 import IntegrationSupport from "./pages/services/IntegrationSupport";
 import EmissionsReduction from "./pages/services/EmissionsReduction";
 import TechnologyConsulting from "./pages/services/TechnologyConsulting";
-
 import Home from "./pages/Home";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
   const location = useLocation();
@@ -18,6 +18,7 @@ export default function App() {
   return (
     <div>
       {/* Only render Navbar if not on homepage */}
+      <ScrollToTop />
       {!isHomePage && <Navbar />}
 
       <Routes>

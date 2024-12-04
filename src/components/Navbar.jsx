@@ -7,9 +7,10 @@ export default function Navbar() {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
   const isAboutPage = location.pathname === "/about";
+  const isServicesPage = location.pathname === "/services";
 
   // Determine if we should use light (white) text
-  const useLightText = isHomePage || isAboutPage;
+  const useLightText = isHomePage || isAboutPage || isServicesPage;
 
   // Different gradient styles for home page vs other pages
   const navbarStyle = isHomePage
