@@ -31,7 +31,7 @@ export default function Navbar() {
   const mobileMenuStyle = useLightText ? "bg-blue-600/95" : "bg-blue-300/95";
 
   return (
-    <Disclosure as="nav" className="fixed w-full z-50">
+    <Disclosure as="nav" className="w-full z-50">
       {({ open }) => (
         <>
           <div className={`px-4 lg:px-6 h-20 flex items-center ${navbarStyle}`}>
@@ -60,24 +60,24 @@ export default function Navbar() {
 
                   {/* Desktop Navigation */}
                   <div className="hidden sm:flex sm:gap-6 sm:ml-auto">
-                    <Link to="/" className={`text-sm font-medium ${textStyle}`}>
+                    <Link to="/" className={`text-1xl font-medium ${textStyle}`}>
                       Home
                     </Link>
                     <Link
                       to="/services"
-                      className={`text-sm font-medium ${textStyle}`}
+                      className={`text-1xl font-medium ${textStyle}`}
                     >
                       Services
                     </Link>
                     <Link
                       to="/about"
-                      className={`text-sm font-medium ${textStyle}`}
+                      className={`text-1xl font-medium ${textStyle}`}
                     >
                       About
                     </Link>
                     <Link
                       to="/contact"
-                      className={`text-sm font-medium ${textStyle}`}
+                      className={`text-1xl font-medium ${textStyle}`}
                     >
                       Contact
                     </Link>

@@ -29,9 +29,9 @@ export default function IntegrationSupportPage() {
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white">
                   Integration Support and Project Management
                 </h1>
-                <p className="max-w-[700px] text-blue-100 md:text-xl font-bold">
+                <p className="max-w-[900px] text-blue-100 md:text-3xl font-bold">
                   Streamlining hydrogen project development with comprehensive
-                  integration and management solutions
+                  integration and management solutions.
                 </p>
               </div>
             </div>
@@ -55,55 +55,10 @@ export default function IntegrationSupportPage() {
         </section> */}
 
         <Section>
-          <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
-            <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-              <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
-                <div className="space-y-4">
-                  <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">
-                    The Challenge of Hydrogen Projects
-                  </h2>
-                  <p className="text-gray-600">
-                    Hydrogen projects involve new and constantly emerging
-                    technologies that require fundamental knowledge to safely
-                    operate and maintain. The integration of these emerging
-                    technologies with established technologies, such as balance
-                    of plant equipment, is not often available through the
-                    technology manufacturers.
-                  </p>
-                  <p className="text-gray-600">
-                    There is no one-stop, turn-key solution because of
-                    site-specific requirements and countless combinations of
-                    technologies to achieve a certain end goal.
-                  </p>
-                </div>
-                <div className="space-y-4">
-                  <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">
-                    Our Solution
-                  </h2>
-                  <p className="text-gray-600">
-                    Hydrogen projects would normally require multiple expensive
-                    engineering companies, but we can streamline project
-                    development. We integrate and manage all technologies unique
-                    to a hydrogen project, including but not limited to:
-                  </p>
-                  <ul className="list-disc list-inside space-y-2 text-gray-600">
-                    <li>PEM fuel cells and electrolyzers</li>
-                    <li>Alkaline electrolyzers</li>
-                    <li>Solid-oxide fuel cells and electrolyzers</li>
-                    <li>Cooling systems</li>
-                    <li>Hydrogen compressors</li>
-                    <li>Gaseous and liquid hydrogen storage</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </section>
-        </Section>
-        <Section>
           <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
             <div className="container mx-auto px-4 md:px-6 max-w-7xl">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none mb-8 text-center">
-                Our Integration Support Process
+                Our Integration Support Approach
               </h2>
               <div className="grid gap-6 lg:grid-cols-4">
                 <div className="bg-white p-6 rounded-lg shadow-md">
@@ -149,6 +104,46 @@ export default function IntegrationSupportPage() {
                     We oversee the entire implementation process, ensuring
                     smooth integration and operation.
                   </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </Section>
+        <Section>
+          <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
+            <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+              <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">
+                    The Challenge of Hydrogen Projects
+                  </h2>
+                  <p className="text-gray-600">
+                  Hydrogen projects involve new and constantly emerging technologies that require fundamental knowledge to safely operate and maintain. The integration of these emerging technologies with established technologies, such as balance of plant equipment, is not often available through the original equipment manufacturers (OEMs).
+                  </p>
+                  <p className="text-gray-600 text-1xl">
+                    There is no one-stop, turn-key solution due to
+                    site-specific requirements and countless combinations of
+                    technologies to achieve a certain end goal.
+                  </p>
+                </div>
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">
+                    Our Solution
+                  </h2>
+                  <p className="text-gray-600">
+                    Hydrogen projects would normally require multiple expensive
+                    engineering companies, but we can streamline project
+                    development. We integrate and manage all technologies unique
+                    to a hydrogen project, including but not limited to:
+                  </p>
+                  <ul className="list-disc list-inside space-y-2 text-gray-600">
+                    <li>PEM fuel cells and electrolyzers</li>
+                    <li>Alkaline electrolyzers</li>
+                    <li>Solid-oxide fuel cells and electrolyzers</li>
+                    <li>Cooling systems</li>
+                    <li>Hydrogen compressors</li>
+                    <li>Gaseous and liquid hydrogen storage</li>
+                  </ul>
                 </div>
               </div>
             </div>

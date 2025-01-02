@@ -65,7 +65,7 @@ export default function ServicesPage() {
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white">
                   Our Services
                 </h1>
-                <p className="max-w-[700px] text-blue-100 md:text-xl font-bold">
+                <p className="max-w-[900px] text-blue-100 md:text-3xl font-bold">
                   At Hyre Energy LLC we pride ourselves on offering three
                   exclusive services that we view as necessary for the adoption
                   of hydrogen energy systems. Explore our services below to see

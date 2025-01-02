@@ -33,8 +33,8 @@ export default function About() {
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white">
                   About Hyre Energy
                 </h1>
-                <p className="max-w-[700px] text-blue-100 md:text-xl font-bold">
-                  Experts in hydrogen produced via renewable electrolysis
+                <p className="max-w-[900px] text-blue-100 md:text-3xl font-bold">
+                  Experts in hydrogen produced via renewable electrolysis.
                 </p>
               </div>
             </div>
@@ -45,7 +45,7 @@ export default function About() {
         <Section>
           <section className="w-full py-12 md:py-24 lg:py-32">
             <div className="container mx-auto max-w-7xl px-4 md:px-6">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl mb-12 text-center">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl mb-12 text-center">
                 Our Core Beliefs
               </h2>
               <div className="space-y-12 max-w-6xl mx-auto">
@@ -116,7 +116,7 @@ export default function About() {
                       {belief.icon}
                       <h3 className="text-2xl font-bold">{belief.title}</h3>
                     </div>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-2xl text-gray-600 leading-relaxed">
                       {belief.content}
                     </p>
                   </div>
@@ -135,15 +135,15 @@ export default function About() {
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
                     Meet the Founding Team
                   </h2>
-                  <p className="max-w-[900px] mx-auto text-gray-500 md:text-xl/relaxed">
+                  <p className="max-w-[900px] mx-auto text-gray-600 text-2xl">
                     A group of students from the National Fuel Cell Research
                     Center (NFCRC) at the University of California, Irvine
                     (UCI).
                   </p>
                 </div>
 
-                <div className="max-w-[800px] mx-auto text-center">
-                  <p className="text-gray-600 leading-relaxed">
+                <div className="max-w-[900px] mx-auto text-center">
+                  <p className="text-gray-600  text-2xl">
                     Our team comprises hydrogen experts with experimental and
                     technical research experience with connections to the energy
                     industry. We are a highly motivated group with extreme
@@ -167,7 +167,7 @@ export default function About() {
                       <p className="text-blue-600 font-medium">
                         Co-Founder, CEO
                       </p>
-                      <div className="space-y-1 text-sm text-gray-500">
+                      <div className="space-y-1 text-sm-xl1 text-gray-600">
                         <p>MS in Mechanical Engineering</p>
                         <p>University of California, Irvine, 2025</p>
                         <p className="pt-2">BS in Mechanical Engineering</p>
@@ -191,14 +191,14 @@ export default function About() {
                       <p className="text-blue-600 font-medium">
                         Co-Founder, CTO
                       </p>
-                      <div className="space-y-1 text-sm text-gray-500">
+                      <div className="space-y-1 text-sm-xl1 text-gray-600">
                         <p>MS in Mechanical Engineering</p>
                         <p>University of California, Irvine, 2025</p>
                         <p className="pt-2">BS in Mechanical Engineering</p>
                         <p>w/ Specialization in Energy Engineering</p>
-                        <p>Southern Illinois University Carbondale, 2021</p>
+                        <p>Southern Illinois University Carbondale, 2022</p>
                         <p className="pt-2">BS in Physics</p>
-                        <p>Southern Illinois University Carbondale, 2021</p>
+                        <p>Southern Illinois University Carbondale, 2022</p>
                       </div>
                     </div>
                   </div>
@@ -216,7 +216,7 @@ export default function About() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl mb-4">
                   Join Us in Shaping the Future of Energy
                 </h2>
-                <p className="max-w-[700px] mx-auto text-gray-500 mb-8">
+                <p className="max-w-[800px] mx-auto text-gray-600 text-2xl mb-8">
                   Whether you're a potential partner, investor, or someone
                   passionate about clean energy, we invite you to be part of our
                   journey towards a sustainable, hydrogen-powered future.
