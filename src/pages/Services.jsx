@@ -2,6 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ClipboardList, LineChart, Lightbulb, ArrowRight } from "lucide-react";
 import { motion, useInView } from "framer-motion";
+import IntegrationSupport from "../assets/integration-support-and-project-management.jpg";
+import TechConsulting from "../assets/tech-consulting.jpg";
+
+
 const Section = ({ children }) => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
@@ -59,7 +63,7 @@ export default function ServicesPage() {
     <div className="flex flex-col min-h-screen">
       <main className="flex-1">
         <Section>
-          <section className="w-full pt-20 pb-12 md:pt-24 md:pb-24 lg:pt-32 lg:pb-32 bg-gradient-to-br from-blue-600 via-blue-500 to-green-400">
+          <section className="-mt-20 w-full pt-20 pb-12 md:pt-24 md:pb-24 lg:pt-32 lg:pb-32 bg-gradient-to-br from-blue-600 via-blue-500 to-green-400">
             <div className="container mx-auto max-w-7xl px-4 md:px-6">
               <div className="flex flex-col items-center text-center space-y-4">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white">
@@ -99,19 +103,19 @@ export default function ServicesPage() {
                         Integration Support and Project Management
                       </h3>
                     </div>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-md text-gray-500">
                       Comprehensive project oversight and implementation
                     </p>
                   </CardHeader>
                   <CardContent className="flex-1 space-y-4">
                     <div className="relative aspect-video w-full overflow-hidden rounded-lg">
                       <img
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/integration%20support%20and%20project%20management.jpg-8xjG6Nupe1dPFiV736arcjBQ1Rc07D.jpeg"
+                        src={IntegrationSupport}
                         alt="Team collaborating on project management"
                         className="object-cover w-full h-full"
                       />
                     </div>
-                    <ul className="list-disc list-inside space-y-2 text-sm text-gray-600">
+                    <ul className="list-disc list-inside space-y-2 text-md text-gray-600">
                       <li>End-to-end project coordination</li>
                       <li>System integration expertise</li>
                       <li>Timeline and resource management</li>
@@ -136,7 +140,7 @@ export default function ServicesPage() {
                         Emissions Reduction Planning
                       </h3>
                     </div>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-md text-gray-500">
                       Strategic pathways to lower emissions
                     </p>
                   </CardHeader>
@@ -148,7 +152,7 @@ export default function ServicesPage() {
                         className="object-cover w-full h-full"
                       />
                     </div>
-                    <ul className="list-disc list-inside space-y-2 text-sm text-gray-600">
+                    <ul className="list-disc list-inside space-y-2 text-md text-gray-600">
                       <li>Comprehensive emissions assessment</li>
                       <li>Reduction strategy development</li>
                       <li>Implementation roadmap creation</li>
@@ -173,19 +177,19 @@ export default function ServicesPage() {
                         Technology Consulting
                       </h3>
                     </div>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-md text-gray-500">
                       Expert guidance on hydrogen solutions
                     </p>
                   </CardHeader>
                   <CardContent className="flex-1 space-y-4">
                     <div className="relative aspect-video w-full overflow-hidden rounded-lg">
                       <img
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tech%20consulting.jpg-DlaZEjMyMAfv0lv9KlCaFTwPqUlekh.jpeg"
+                        src={TechConsulting}
                         alt="Technical consulting and blueprint review"
                         className="object-cover w-full h-full"
                       />
                     </div>
-                    <ul className="list-disc list-inside space-y-2 text-sm text-gray-600">
+                    <ul className="list-disc list-inside space-y-2 text-md text-gray-600">
                       <li>Technical feasibility studies</li>
                       <li>System design optimization</li>
                       <li>Technology selection support</li>
@@ -217,8 +221,8 @@ export default function ServicesPage() {
               </h2>
               <div className="grid gap-6 lg:grid-cols-2">
                 <div className="space-y-4">
-                  <h3 className="text-xl font-bold">Expertise</h3>
-                  <p className="text-gray-600">
+                  <h3 className="text-3xl font-bold">Expertise</h3>
+                  <p className="text-2xl text-gray-600">
                     Our team of experts brings years of experience in hydrogen
                     technology, renewable energy, and industrial processes. We
                     stay at the forefront of innovation to deliver cutting-edge
@@ -226,16 +230,16 @@ export default function ServicesPage() {
                   </p>
                 </div>
                 <div className="space-y-4">
-                  <h3 className="text-xl font-bold">Customized Solutions</h3>
-                  <p className="text-gray-600">
+                  <h3 className="text-3xl font-bold">Customized Solutions</h3>
+                  <p className="text-2xl text-gray-600">
                     We understand that every business is unique. That's why we
                     work closely with you to develop tailored hydrogen solutions
                     that meet your specific needs and goals.
                   </p>
                 </div>
                 <div className="space-y-4">
-                  <h3 className="text-xl font-bold">Sustainability Focus</h3>
-                  <p className="text-gray-600">
+                  <h3 className="text-3xl font-bold">Sustainability Focus</h3>
+                  <p className="text-2xl text-gray-600">
                     Our commitment to sustainability drives everything we do. By
                     choosing Hyre Energy, you're partnering with a company
                     dedicated to reducing emissions and creating a cleaner
@@ -243,8 +247,8 @@ export default function ServicesPage() {
                   </p>
                 </div>
                 <div className="space-y-4">
-                  <h3 className="text-xl font-bold">End-to-End Support</h3>
-                  <p className="text-gray-600">
+                  <h3 className="text-3xl font-bold">End-to-End Support</h3>
+                  <p className="text-2xl text-gray-600">
                     From initial consultation to implementation and ongoing
                     support, we're with you every step of the way. Our
                     comprehensive approach ensures the success of your hydrogen
@@ -262,7 +266,7 @@ export default function ServicesPage() {
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl mb-8">
                 Ready to Transform Your Energy Future?
               </h2>
-              <p className="max-w-[700px] mx-auto text-gray-700 md:text-xl lg:text-base xl:text-xl mb-12">
+              <p className="max-w-[700px] mx-auto text-gray-700 md:text-xl lg:text-base xl:text-2xl mb-12">
                 Take the first step towards a sustainable, hydrogen-powered
                 future for your business. Contact us today to discuss how Hyre
                 Energy can help you achieve your energy goals.

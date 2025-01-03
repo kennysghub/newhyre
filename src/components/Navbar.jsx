@@ -8,22 +8,33 @@ export default function Navbar() {
   const isHomePage = location.pathname === "/";
   const isAboutPage = location.pathname === "/about";
   const isServicesPage = location.pathname === "/services";
+  const isIntegrationSupportPage = location.pathname === "/services/integration-support";
+  const isEmissionsReductionPage = location.pathname === "/services/emissions-reduction";
+  const isTechnologyConsultingPage = location.pathname === "/services/technology-consulting";
+  const isContactPage = location.pathname === "/contact";
 
-  const useLightText = isHomePage || isAboutPage || isServicesPage;
+  // Determine if the navbar should fade into the first section
+  const usePageBackground =
+    isHomePage ||
+    isAboutPage ||
+    isServicesPage ||
+    isIntegrationSupportPage ||
+    isEmissionsReductionPage ||
+    isTechnologyConsultingPage;
 
-  const navbarStyle = isHomePage
-    ? "bg-gradient-to-b from-blue-600/80 via-green-500/40 to-transparent"
-    : "bg-gradient-to-b from-blue-300/90 via-green-200/70 to-transparent";
+  const navbarStyle = usePageBackground
+    // // ? "bg-gradient-to-b from-blue-600/80 via-green-500/40 to-transparent"
+    // : "bg-blue-600";
 
-  const textStyle = useLightText
+  const textStyle = usePageBackground
     ? "text-white hover:text-blue-100"
     : "text-gray-800 hover:text-blue-600";
 
-  const menuButtonStyle = useLightText
+  const menuButtonStyle = usePageBackground
     ? "text-white hover:text-blue-100"
     : "text-gray-800 hover:text-blue-600";
 
-  const mobileMenuStyle = useLightText ? "bg-blue-600/95" : "bg-blue-300/95";
+  const mobileMenuStyle = usePageBackground ? "bg-blue-600/95" : "bg-blue-300/95";
 
   return (
     <Disclosure as="nav" className="w-full z-50">

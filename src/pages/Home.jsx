@@ -6,7 +6,7 @@ import home from "../assets/home/home.jpeg";
 import energyStorage from "../assets/home/energy-storage.png";
 import hvdFueling from "../assets/home/hvd-fueling.jpeg";
 import industrialDecarbonization from "../assets/home/industrial decarb2.png";
-import H2forecast from "../assets/home/H2forecast.png";
+import H2forecast from "../assets/projected-H2-demand.png";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -89,87 +89,117 @@ const HomePage = () => {
         </motion.div>
       </div>
 
-      {/* Three Pillars Section */}
-      <section className="w-full py-24 bg-gradient-to-r from-blue-50 via-green-50 to-yellow-50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="space-y-10"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-          >
-            <div className="space-y-4 text-center">
-              <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">
-                Renewable energy provides an opportunity to produce clean fuels
-                <br /> for many difficult-to-decarbonize end uses.
-              </h2>
-            </div>
+    {/* Two-Column Section */}
+    <section className="w-full py-24 bg-gradient-to-r from-blue-50 via-green-50 to-yellow-50">
+      <div className="container mx-auto px-4">
+        <motion.div
+          className="grid grid-cols-1 lg:grid-cols-2 gap-10"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+        >
+          {/* Left Column */}
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">
+              Renewable energy provides an opportunity to produce clean fuels
+              for many difficult to decarbonize end-uses. We believe the below three sectors
+              will dominate the hydrogen market.
+            </h2>
+          </div>
 
-            <div className="grid gap-10 sm:grid-cols-3">
-              <motion.button
-                onClick={() => scrollToSection("hdv-fueling")}
-                className="group relative overflow-hidden rounded-lg border bg-white shadow-md transition-all hover:shadow-lg"
-                variants={fadeInUp}
-              >
-                <div className="aspect-[4/3] relative">
-                  <div className="absolute inset-0 bg-blue-100 flex items-center justify-center">
-                    <Truck className="h-28 w-28 text-blue-600" />
-                  </div>
-                </div>
-                <div className="p-4 text-left">
-                  <h3 className="text-2xl font-bold">
-                    Heavy-duty-vehicle (HDV) fueling
-                  </h3>
-                  <p className="mt-2 text-1xl text-gray-500">
-                    Sustainable solutions for heavy transport
-                  </p>
-                  <ArrowDown className="mt-2 h-5 w-5 text-gray-400" />
-                </div>
-              </motion.button>
+          {/* Right Column */}
+          <div className="flex flex-col justify-center items-center">
+            <h2 className="text-3xl font-bold tracking-tighter mb-4 text-center">
+              California Hydrogen Potential
+            </h2>
+            <p className="text-2xl text-gray-600 mb-6 text-center">
+              Discover the opportunities for hydrogen energy production in California.
+              Explore how a case study shows the renewable energy potential for hydrogen in California.
+            </p>
+            <a
+              href="/california-hydrogen-potential"
+              className="text-white bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg text-lg font-medium transition"
+            >
+              Explore Now
+            </a>
+          </div>
+        </motion.div>
+      </div>
+    </section>
 
-              <motion.button
-                onClick={() => scrollToSection("industrial-decarbonization")}
-                className="group relative overflow-hidden rounded-lg border bg-white shadow-md transition-all hover:shadow-lg"
-                variants={fadeInUp}
-              >
-                <div className="aspect-[4/3] relative">
-                  <div className="absolute inset-0 bg-green-100 flex items-center justify-center">
-                    <Factory className="h-28 w-28 text-green-600" />
-                  </div>
+    {/* Three Pillars Section */}
+    <section className="w-full py-24 bg-gradient-to-r from-blue-50 via-green-50 to-yellow-50">
+      <div className="container mx-auto px-4">
+        <motion.div
+          className="space-y-10"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+        >
+          {/* Three-Column Grid */}
+          <div className="grid gap-10 sm:grid-cols-3">
+            <motion.button
+              onClick={() => scrollToSection("hdv-fueling")}
+              className="group relative overflow-hidden rounded-lg border bg-white shadow-md transition-all hover:shadow-lg"
+              variants={fadeInUp}
+            >
+              <div className="aspect-[4/3] relative">
+                <div className="absolute inset-0 bg-blue-100 flex items-center justify-center">
+                  <Truck className="h-28 w-28 text-blue-600" />
                 </div>
-                <div className="p-4 text-left">
-                  <h3 className="text-2xl font-bold">
-                    Industrial applications
-                  </h3>
-                  <p className="mt-2 text-1xl text-gray-500">
-                    Clean hydrogen for industrial processes
-                  </p>
-                  <ArrowDown className="mt-2 h-5 w-5 text-gray-400" />
-                </div>
-              </motion.button>
+              </div>
+              <div className="p-4 text-left">
+                <h3 className="text-2xl font-bold">
+                  Heavy-duty-vehicle (HDV) fueling
+                </h3>
+                <p className="mt-2 text-1xl text-gray-500">
+                  Sustainable solutions for heavy transport
+                </p>
+                <ArrowDown className="mt-2 h-5 w-5 text-gray-400" />
+              </div>
+            </motion.button>
 
-              <motion.button
-                onClick={() => scrollToSection("energy-storage")}
-                className="group relative overflow-hidden rounded-lg border bg-white shadow-md transition-all hover:shadow-lg"
-                variants={fadeInUp}
-              >
-                <div className="aspect-[4/3] relative">
-                  <div className="absolute inset-0 bg-yellow-100 flex items-center justify-center">
-                    <Battery className="h-28 w-28 text-yellow-600" />
-                  </div>
+            <motion.button
+              onClick={() => scrollToSection("industrial-decarbonization")}
+              className="group relative overflow-hidden rounded-lg border bg-white shadow-md transition-all hover:shadow-lg"
+              variants={fadeInUp}
+            >
+              <div className="aspect-[4/3] relative">
+                <div className="absolute inset-0 bg-green-100 flex items-center justify-center">
+                  <Factory className="h-28 w-28 text-green-600" />
                 </div>
-                <div className="p-4 text-left">
-                  <h3 className="text-2xl font-bold">Energy storage</h3>
-                  <p className="mt-2 text-1xl text-gray-500">
-                    Hydrogen storage solutions for renewable energy integration
-                  </p>
-                  <ArrowDown className="mt-2 h-5 w-5 text-gray-400" />
+              </div>
+              <div className="p-4 text-left">
+                <h3 className="text-2xl font-bold">Industrial applications</h3>
+                <p className="mt-2 text-1xl text-gray-500">
+                  Clean hydrogen for industrial processes
+                </p>
+                <ArrowDown className="mt-2 h-5 w-5 text-gray-400" />
+              </div>
+            </motion.button>
+
+            <motion.button
+              onClick={() => scrollToSection("energy-storage")}
+              className="group relative overflow-hidden rounded-lg border bg-white shadow-md transition-all hover:shadow-lg"
+              variants={fadeInUp}
+            >
+              <div className="aspect-[4/3] relative">
+                <div className="absolute inset-0 bg-yellow-100 flex items-center justify-center">
+                  <Battery className="h-28 w-28 text-yellow-600" />
                 </div>
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+              </div>
+              <div className="p-4 text-left">
+                <h3 className="text-2xl font-bold">Energy storage</h3>
+                <p className="mt-2 text-1xl text-gray-500">
+                  Hydrogen storage solutions for renewable energy integration
+                </p>
+                <ArrowDown className="mt-2 h-5 w-5 text-gray-400" />
+              </div>
+            </motion.button>
+          </div>
+        </motion.div>
+      </div>
+    </section>
 
       {/* Keep your existing sections for HDV Fueling, Industrial Applications, and Energy Storage */}
 
@@ -183,7 +213,7 @@ const HomePage = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h2 className="text-3xl font-bold text-custom-yellow">
+            <h2 className="text-3xl font-bold text-blue-600">
               HDV Fueling
             </h2>
             <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -201,7 +231,7 @@ const HomePage = () => {
                     "FC-HDV is becoming economically competitive with diesel combustion engines as political incentives are implemented.",
                   ].map((item, index) => (
                     <li key={index} className="flex items-center gap-3">
-                      <ArrowRight className="text-yellow-400 h-6 w-6 flex-shrink-0" />
+                      <ArrowRight className="text-blue-600 h-6 w-6 flex-shrink-0" />
                       <span className="text-gray-600 text-1xl">{item}</span>
                     </li>
                   ))}
@@ -235,7 +265,7 @@ const HomePage = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h2 className="text-3xl font-bold text-custom-yellow">
+            <h2 className="text-3xl font-bold text-green-600">
               Industrial Applications
             </h2>
             <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -263,7 +293,7 @@ const HomePage = () => {
                     "Closed-loop processes can be engineered to reduce the demand for water and further improve overall system efficiency.",
                   ].map((item, index) => (
                     <li key={index} className="flex items-center gap-3">
-                      <ArrowRight className="text-yellow-400 h-6 w-6 flex-shrink-0" />
+                      <ArrowRight className="text-green-600 h-6 w-6 flex-shrink-0" />
                       <span className="text-gray-600 text-1xl">{item}</span>
                     </li>
                   ))}
@@ -336,9 +366,9 @@ const HomePage = () => {
             </h3>
           </motion.div>
         </div>
-      </section>
-      {/* Energy Data Analysis Section */}
-      <section className="w-full py-10 bg-gray-50">
+      {/* Add space between sections */}
+      <div className="h-16"></div> {/* Spacer with 16px height */}
+      {/* LCOH Plot */}
         <div className="container mx-auto px-4">
           <motion.div
             className="space-y-6 text-center"
@@ -348,33 +378,17 @@ const HomePage = () => {
           >
             {/* Image Display */}
             <div className="relative mx-auto max-w-4xl">
-              <img
+              <motion.img
                 src={H2forecast}
                 alt="H2 Forecast"
                 className="w-full h-auto object-contain rounded-xl shadow-lg border"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
               />
             </div>
           </motion.div>
         </div>
-      </section>
-
-      <section className="w-full py-24 bg-gray-50">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold tracking-tighter mb-4">
-            California Hydrogen Potential
-          </h2>
-          <p className="text-lg text-gray-600 mb-6">
-            Discover the opportunities for hydrogen energy production in California.
-          </p>
-          <a
-            href="/california-hydrogen-potential"
-            className="text-white bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg text-lg font-medium transition"
-          >
-            Explore Now
-          </a>
-        </div>
-      </section>
-      
+        </section>
       {/* References Section */}
        <motion.section
         className="w-full py-24 bg-white"
@@ -383,7 +397,7 @@ const HomePage = () => {
         viewport={{ once: true }}
       >
         <div className="container mx-auto px-4">
-          <div className="bg-gray-100 rounded-xl p-6 shadow-lg">
+          <div className="rounded-xl p-6 shadow-lg">
             <h2 className="text-3xl font-bold tracking-tighter mb-4">References</h2>
             <ul className="list-disc list-inside space-y-2">
               <li className="text-1xl text-gray-700">September H2IQ Hour: Decarbonizing Heavy-Duty Vehicles. (2023). https://www.energy.gov/eere/fuelcells/september-h2iq-hour-decarbonizing-heavy-duty-vehicles</li>

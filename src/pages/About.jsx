@@ -27,7 +27,7 @@ export default function About() {
       <main className="flex-1">
         {/* Hero Section */}
         <Section>
-          <section className="w-full pt-20 pb-12 md:pt-24 md:pb-24 lg:pt-32 lg:pb-32 bg-gradient-to-br from-blue-600 via-blue-500 to-green-400">
+          <section className="-mt-20 w-full pt-20 pb-12 md:pt-24 md:pb-24 lg:pt-32 lg:pb-32 bg-gradient-to-br from-blue-600 via-blue-500 to-green-400">
             <div className="container mx-auto max-w-7xl px-4 md:px-6">
               <div className="flex flex-col items-center text-center space-y-4">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white">
