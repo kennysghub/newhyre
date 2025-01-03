@@ -9,6 +9,7 @@ import IntegrationSupport from "./pages/services/IntegrationSupport";
 import EmissionsReduction from "./pages/services/EmissionsReduction";
 import TechnologyConsulting from "./pages/services/TechnologyConsulting";
 import Home from "./pages/Home";
+import CaliforniaHydrogenPotential from "./pages/CaliforniaHydrogenPotential"; // Import the new page
 import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
@@ -34,6 +35,12 @@ export default function App() {
             element={<TechnologyConsulting />}
           />
         </Route>
+
+        {/* Add the new route */}
+        <Route
+          path="/california-hydrogen-potential"
+          element={<CaliforniaHydrogenPotential />}
+        />
       </Routes>
 
       <Footer />

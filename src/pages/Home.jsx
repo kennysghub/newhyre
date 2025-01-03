@@ -173,6 +173,23 @@ const HomePage = () => {
         </div>
       </section>
 
+      <section className="w-full py-24 bg-gray-50">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold tracking-tighter mb-4">
+            California Hydrogen Potential
+          </h2>
+          <p className="text-lg text-gray-600 mb-6">
+            Discover the opportunities for hydrogen energy production in California.
+          </p>
+          <a
+            href="/california-hydrogen-potential"
+            className="text-white bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg text-lg font-medium transition"
+          >
+            Explore Now
+          </a>
+        </div>
+      </section>
+
       {/* Keep your existing sections for HDV Fueling, Industrial Applications, and Energy Storage */}
 
       {/* Just update the styling to match the new design */}
@@ -193,7 +210,7 @@ const HomePage = () => {
                 <p className="font-bold text-2xl">
                 Our scalable solutions empower the heavy transport industry to reduce emissions and adopt practical hydrogen technologies.
                 </p>
-                <ul className="space-y-4">
+                <ul className="space-y-4 pl-6">
                   {[
                     "There is an expected 50% increase in total freight from 19.4 billion tons in 2021 to 28.8 billion tons in 2050.",
                     "Transportation has surpassed electricity generation as the largest source of carbon emissions in the U.S. with HDVs alone contributing 7% of total GHGs in 2021.",

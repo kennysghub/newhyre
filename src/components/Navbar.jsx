@@ -9,25 +9,20 @@ export default function Navbar() {
   const isAboutPage = location.pathname === "/about";
   const isServicesPage = location.pathname === "/services";
 
-  // Determine if we should use light (white) text
   const useLightText = isHomePage || isAboutPage || isServicesPage;
 
-  // Different gradient styles for home page vs other pages
   const navbarStyle = isHomePage
     ? "bg-gradient-to-b from-blue-600/80 via-green-500/40 to-transparent"
     : "bg-gradient-to-b from-blue-300/90 via-green-200/70 to-transparent";
 
-  // Text color styles
   const textStyle = useLightText
     ? "text-white hover:text-blue-100"
     : "text-gray-800 hover:text-blue-600";
 
-  // Mobile menu button color
   const menuButtonStyle = useLightText
     ? "text-white hover:text-blue-100"
     : "text-gray-800 hover:text-blue-600";
 
-  // Mobile menu background
   const mobileMenuStyle = useLightText ? "bg-blue-600/95" : "bg-blue-300/95";
 
   return (
@@ -35,8 +30,8 @@ export default function Navbar() {
       {({ open }) => (
         <>
           <div className={`px-4 lg:px-6 h-20 flex items-center ${navbarStyle}`}>
-            <div className="relative mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 w-full">
-              <div className="relative flex h-16 items-center justify-between">
+            <div className="relative mx-auto max-w-7xl w-full">
+              <div className="relative flex h-16 items-center justify-end">
                 {/* Mobile menu button */}
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                   <Disclosure.Button
@@ -51,15 +46,10 @@ export default function Navbar() {
                   </Disclosure.Button>
                 </div>
 
-                {/* Logo and navigation links */}
-                <div className="flex flex-1 items-center justify-between">
-                  {/* Logo */}
-                  <div className="flex-shrink-0 sm:flex sm:items-center">
-                    <img className="h-16 w-auto" src={logo} alt="HyRe-Energy" />
-                  </div>
-
+                {/* Navigation Links and Logo */}
+                <div className="flex flex-1 items-center justify-end gap-6">
                   {/* Desktop Navigation */}
-                  <div className="hidden sm:flex sm:gap-6 sm:ml-auto">
+                  <div className="hidden sm:flex sm:gap-6">
                     <Link to="/" className={`text-1xl font-medium ${textStyle}`}>
                       Home
                     </Link>
@@ -82,6 +72,15 @@ export default function Navbar() {
                       Contact
                     </Link>
                   </div>
+
+                  {/* Logo */}
+                  <div className="flex-shrink-0">
+                    <img
+                      className="h-20 w-auto object-contain"
+                      src={logo}
+                      alt="HyRe-Energy"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -91,7 +90,7 @@ export default function Navbar() {
           <Disclosure.Panel
             className={`sm:hidden absolute w-full ${mobileMenuStyle} z-40`}
           >
-            <div className="space-y-1 px-2 pb-3 pt-2">
+            <div className="space-y-2 px-4 pb-4 pt-3">
               <Disclosure.Button
                 as={Link}
                 to="/"
