@@ -6,6 +6,7 @@ import home from "../assets/home/home.jpeg";
 import energyStorage from "../assets/home/energy-storage.png";
 import hvdFueling from "../assets/home/hvd-fueling.jpeg";
 import industrialDecarbonization from "../assets/home/industrial decarb2.png";
+import H2forecast from "../assets/home/H2forecast.png";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -173,23 +174,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="w-full py-24 bg-gray-50">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold tracking-tighter mb-4">
-            California Hydrogen Potential
-          </h2>
-          <p className="text-lg text-gray-600 mb-6">
-            Discover the opportunities for hydrogen energy production in California.
-          </p>
-          <a
-            href="/california-hydrogen-potential"
-            className="text-white bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg text-lg font-medium transition"
-          >
-            Explore Now
-          </a>
-        </div>
-      </section>
-
       {/* Keep your existing sections for HDV Fueling, Industrial Applications, and Energy Storage */}
 
       {/* Just update the styling to match the new design */}
@@ -219,8 +203,8 @@ const HomePage = () => {
                     "In heavy duty applications, FCEV outperform BEV in number of required stops, cargo space, fueling time, and vehicle weight.",
                     "FC-HDV is becoming economically competitive with diesel combustion engines as political incentives are implemented.",
                   ].map((item, index) => (
-                    <li key={index} className="flex items-start">
-                      <ArrowRight className="text-yellow-400 h-5 w-5 flex-shrink-0" />
+                    <li key={index} className="flex items-center gap-3">
+                      <ArrowRight className="text-yellow-400 h-6 w-6 flex-shrink-0" />
                       <span className="text-gray-600 text-1xl">{item}</span>
                     </li>
                   ))}
@@ -281,8 +265,8 @@ const HomePage = () => {
                     "High temperature electrolysis can be thermally integrated with industrial processes to produce emission-free hydrogen with reduced primary energy consumption sourced entirely from renewable energy sources.",
                     "Closed-loop processes can be engineered to reduce the demand for water and further improve overall system efficiency.",
                   ].map((item, index) => (
-                    <li key={index} className="flex items-start">
-                      <ArrowRight className="text-yellow-400 h-5 w-5 flex-shrink-0" />
+                    <li key={index} className="flex items-center gap-3">
+                      <ArrowRight className="text-yellow-400 h-6 w-6 flex-shrink-0" />
                       <span className="text-gray-600 text-1xl">{item}</span>
                     </li>
                   ))}
@@ -317,8 +301,8 @@ const HomePage = () => {
                     "Stored hydrogen can be reconverted to electricity via fuel cells or combustion in existing power production facilities.",
                     "Energy storage systems utilizing a fuel cell for power reconversion offer higher electrical efficiencies of 60-80% and drastically lower emissions compared to traditional fossil fuel methods.",
                   ].map((item, index) => (
-                    <li key={index} className="flex items-start">
-                      <ArrowRight className="text-yellow-400 h-5 w-5 flex-shrink-0" />
+                    <li key={index} className="flex items-center gap-3">
+                      <ArrowRight className="text-yellow-400 h-6 w-6 flex-shrink-0" />
                       <span className="text-gray-600 text-1xl">{item}</span>
                     </li>
                   ))}
@@ -340,7 +324,7 @@ const HomePage = () => {
         </div>
       </section>
       {/* Market Growth Section */}
-      <section className="w-full py-24 bg-gray-50">
+      <section className="w-full py-10 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0 }}
@@ -348,27 +332,52 @@ const HomePage = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h2 className="text-3xl font-bold tracking-tighter">
-              With the above 3 markets in place, demand for hydrogen will
-              increase dramatically over the next 20 years leading to a decrease
+            <h3 className="text-3xl font-bold tracking-tighter">
+              With the above 3 markets in place, demand for hydrogen is expected to
+              increase dramatically over the next 20 years, leading to a significant decrease
               in the overall levelized cost of hydrogen (LCOH).
-            </h2>
+            </h3>
           </motion.div>
         </div>
       </section>
       {/* Energy Data Analysis Section */}
-      <motion.section
-        className="w-full py-24 bg-gray-50"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-      >
+      <section className="w-full py-10 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="bg-white rounded-xl p-6 shadow-lg">
-            <MainChart />
-          </div>
+          <motion.div
+            className="space-y-6 text-center"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            {/* Image Display */}
+            <div className="relative mx-auto max-w-4xl">
+              <img
+                src={H2forecast}
+                alt="H2 Forecast"
+                className="w-full h-auto object-contain rounded-xl shadow-lg border"
+              />
+            </div>
+          </motion.div>
         </div>
-      </motion.section>
+      </section>
+
+      <section className="w-full py-24 bg-gray-50">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold tracking-tighter mb-4">
+            California Hydrogen Potential
+          </h2>
+          <p className="text-lg text-gray-600 mb-6">
+            Discover the opportunities for hydrogen energy production in California.
+          </p>
+          <a
+            href="/california-hydrogen-potential"
+            className="text-white bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg text-lg font-medium transition"
+          >
+            Explore Now
+          </a>
+        </div>
+      </section>
+      
       {/* References Section */}
        <motion.section
         className="w-full py-24 bg-white"
