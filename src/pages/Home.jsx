@@ -98,14 +98,11 @@ const HomePage = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            <div className="space-y-4">
+            <div className="space-y-4 text-center">
               <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">
                 Renewable energy provides an opportunity to produce clean fuels
-                for many difficult to decarbonize end-uses.
+                <br /> for many difficult-to-decarbonize end uses.
               </h2>
-              <p className="text-2xl text-gray-600">
-              Click here to view how a case study shows the renewable energy potential for hydrogen in California.
-              </p>
             </div>
 
             <div className="grid gap-10 sm:grid-cols-3">
