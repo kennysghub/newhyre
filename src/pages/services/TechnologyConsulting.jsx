@@ -196,8 +196,7 @@ export default function TechnologyConsultingPage() {
                   Technology Consulting
                 </h1>
                 <p className="max-w-[700px] text-blue-100 md:text-3xl font-bold">
-                  Expert guidance on hydrogen technologies for your business
-                  success.
+                  Expert guidance on hydrogen technologies to help your business succeed
                 </p>
               </div>
             </div>
@@ -257,6 +256,33 @@ export default function TechnologyConsultingPage() {
         </Section>
 
         <Section>
+          <section className="w-full py-0 md:py-3 lg:py-6 bg-white">
+            <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+              <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold tracking-tighter sm:text-4xl">
+                    Navigating the Evolving Hydrogen Market
+                  </h2>
+                  <p className="text-2xl text-gray-600">
+                  The commercialized market of hydrogen technologies is always evolving. 
+                  We can provide technical advice on hydrogen equipment and integrated system designs 
+                  to de-risk your investment. We can advise on hydrogen project proposals and offer 
+                  step-by-step guidance to achieve your overall business goals.
+                  </p>
+                </div>
+                <div className="relative aspect-video overflow-hidden rounded-xl">
+                  <img
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tech%20consulting.jpg-DlaZEjMyMAfv0lv9KlCaFTwPqUlekh.jpeg"
+                    alt="Technical consulting and blueprint review"
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+        </Section>
+
+        <Section>
           <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
             <div className="container mx-auto px-4 md:px-6 max-w-7xl">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none mb-12 text-center">
@@ -309,38 +335,7 @@ export default function TechnologyConsultingPage() {
             </div>
           </section>
         </Section>
-        <Section>
-          <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
-            <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-              <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
-                <div className="space-y-4">
-                  <h2 className="text-2xl font-bold tracking-tighter sm:text-4xl">
-                    Navigating the Evolving Hydrogen Market
-                  </h2>
-                  <p className="text-2xl text-gray-600">
-                    The commercialized market of hydrogen technologies is always
-                    evolving. We can provide scientific advice on new hydrogen
-                    technology to de-risk an investment. Additionally, no two
-                    hydrogen projects will be the same because different sites
-                    have different requirements and end goals.
-                  </p>
-                  <p className="text-2xl text-gray-600">
-                    We can advise on hydrogen project proposals and offer
-                    step-by-step guidance to achieve your overall business
-                    goals.
-                  </p>
-                </div>
-                <div className="relative aspect-video overflow-hidden rounded-xl">
-                  <img
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tech%20consulting.jpg-DlaZEjMyMAfv0lv9KlCaFTwPqUlekh.jpeg"
-                    alt="Technical consulting and blueprint review"
-                    className="object-cover w-full h-full"
-                  />
-                </div>
-              </div>
-            </div>
-          </section>
-        </Section>
+
         <Section>
           <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
             <div className="container mx-auto px-4 md:px-6 max-w-7xl text-center">

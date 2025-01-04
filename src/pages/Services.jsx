@@ -69,21 +69,17 @@ export default function ServicesPage() {
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white">
                   Our Services
                 </h1>
-                <p className="max-w-[900px] text-blue-100 md:text-3xl font-bold">
-                  At Hyre Energy LLC we pride ourselves on offering three
-                  exclusive services that we view as necessary for the adoption
-                  of hydrogen energy systems. Explore our services below to see
-                  how we can help your business reduce emissions and join the
-                  clean energy revolution.
+                <p className="text-blue-100 md:text-3xl font-bold">
+                  Explore our services below to see how we can help
+                  your business reduce emissions and get involved in the clean energy transformation
                 </p>
               </div>
             </div>
           </section>
         </Section>
-
         <Section>
-          <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-blue-50 via-green-50 to-yellow-50">
-            <div className="container px-4 md:px-6 mx-auto">
+          <section className="w-full py-3 md:py-6 lg:py-9 bg-gradient-to-r from-blue-50 via-green-50 to-yellow-50">
+            <div className="container px-4 py-6 md:px-6 mx-auto">
               {/* <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl mb-8">
               Our Services
             </h1> */}
@@ -100,21 +96,23 @@ export default function ServicesPage() {
                     <div className="flex items-center space-x-4">
                       <ClipboardList className="w-8 h-8 text-blue-600" />
                       <h3 className="text-xl font-bold">
-                        Integration Support and Project Management
+                        Project Management
                       </h3>
                     </div>
                     <p className="text-md text-gray-500">
-                      Comprehensive project oversight and implementation
+                      Comprehensive oversight and implementation
                     </p>
                   </CardHeader>
                   <CardContent className="flex-1 space-y-4">
-                    <div className="relative aspect-video w-full overflow-hidden rounded-lg">
-                      <img
-                        src={IntegrationSupport}
-                        alt="Team collaborating on project management"
-                        className="object-cover w-full h-full"
-                      />
-                    </div>
+                    <Link to="/services/integration-support" className="w-full">
+                      <div className="relative aspect-video w-full overflow-hidden rounded-lg">
+                        <img
+                          src={IntegrationSupport}
+                          alt="Team collaborating on project management"
+                          className="object-cover w-full h-full"
+                        />
+                      </div>
+                    </Link>
                     <ul className="list-disc list-inside space-y-2 text-md text-gray-600">
                       <li>End-to-end project coordination</li>
                       <li>System integration expertise</li>
@@ -145,13 +143,15 @@ export default function ServicesPage() {
                     </p>
                   </CardHeader>
                   <CardContent className="flex-1 space-y-4">
-                    <div className="relative aspect-video w-full overflow-hidden rounded-lg">
-                      <img
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Emissions%20reductions.jpg-EwN7gOWxh0dD6uiXrnK2FcvBsPg6Fs.jpeg"
-                        alt="Industrial emissions and clean energy symbolism"
-                        className="object-cover w-full h-full"
-                      />
-                    </div>
+                  <Link to="/services/emissions-reduction" className="w-full">
+                      <div className="relative aspect-video w-full overflow-hidden rounded-lg">
+                        <img
+                          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Emissions%20reductions.jpg-EwN7gOWxh0dD6uiXrnK2FcvBsPg6Fs.jpeg"
+                          alt="Industrial emissions and clean energy symbolism"
+                          className="object-cover w-full h-full"
+                        />
+                      </div>
+                    </Link>
                     <ul className="list-disc list-inside space-y-2 text-md text-gray-600">
                       <li>Comprehensive emissions assessment</li>
                       <li>Reduction strategy development</li>
@@ -182,13 +182,15 @@ export default function ServicesPage() {
                     </p>
                   </CardHeader>
                   <CardContent className="flex-1 space-y-4">
-                    <div className="relative aspect-video w-full overflow-hidden rounded-lg">
-                      <img
-                        src={TechConsulting}
-                        alt="Technical consulting and blueprint review"
-                        className="object-cover w-full h-full"
-                      />
-                    </div>
+                    <Link to="/services/technology-consulting" className="w-full">
+                      <div className="relative aspect-video w-full overflow-hidden rounded-lg">
+                        <img
+                          src={TechConsulting}
+                          alt="Technical consulting and blueprint review"
+                          className="object-cover w-full h-full"
+                        />
+                      </div>
+                    </Link>
                     <ul className="list-disc list-inside space-y-2 text-md text-gray-600">
                       <li>Technical feasibility studies</li>
                       <li>System design optimization</li>

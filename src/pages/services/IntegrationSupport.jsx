@@ -27,11 +27,11 @@ export default function IntegrationSupportPage() {
             <div className="container mx-auto max-w-7xl px-4 md:px-6">
               <div className="flex flex-col items-center text-center space-y-4">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white">
-                  Integration Support and Project Management
+                  Project Management
                 </h1>
                 <p className="max-w-[900px] text-blue-100 md:text-3xl font-bold">
                   Streamlining hydrogen project development with comprehensive
-                  integration and management solutions.
+                  integration and management solutions
                 </p>
               </div>
             </div>
@@ -55,10 +55,10 @@ export default function IntegrationSupportPage() {
         </section> */}
 
         <Section>
-          <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
+          <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
             <div className="container mx-auto px-4 md:px-6 max-w-7xl">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none mb-8 text-center">
-                Our Integration Support Approach
+                Our Project Management Approach
               </h2>
               <div className="grid gap-6 lg:grid-cols-4">
                 <div className="bg-white p-6 rounded-lg shadow-md">
@@ -107,10 +107,33 @@ export default function IntegrationSupportPage() {
                 </div>
               </div>
             </div>
+            <div className="container mx-auto px-6 py-9">
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  className="space-y-6 text-center"
+                >
+                  <h3 className="text-2xl space-y-2 text-gray-600">
+                    <br/>
+                    The first Hyre Energy projects entail islanded microgrid design and
+                    development to provide renewable hydrogen to new HDV fueling stations,
+                    existing industrial sites, and novel energy storage applications.
+                  
+                    Using our custom software, we obtain local weather data to optimize renewable
+                    energy sources, battery and hydrogen energy storage, and electrolyzer
+                    capacity intended to supply these sectors with targeted quantities of clean hydrogen.
+              
+                    We rely on our experience and expertise to engineer tailored solutions
+                    which ensure high system efficiencies and the lowest levelized cost
+                    of hydrogen to our customers.
+                  </h3>
+                </motion.div>
+              </div>
           </section>
         </Section>
         <Section>
-          <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
+          <section className="w-full py-3 md:py-6 lg:py-9 bg-white">
             <div className="container mx-auto px-4 md:px-6 max-w-7xl">
               <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
                 <div className="space-y-4">

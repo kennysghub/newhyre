@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Truck, Factory, Battery, ArrowDown } from "lucide-react";
 import MainChart from "../components/Charts/MainChart";
@@ -22,6 +23,12 @@ const staggerChildren = {
   },
 };
 const HomePage = () => {
+   const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {

@@ -40,7 +40,7 @@ export default function EmissionsReductionPage() {
                   Emissions Reduction Planning
                 </h1>
                 <p className="max-w-[900px] text-blue-100 md:text-3xl font-bold">
-                  Unlocking the true potential of hydrogen for a cleaner future.
+                  Unlocking the true potential of hydrogen for a cleaner future
                 </p>
               </div>
             </div>
@@ -95,6 +95,35 @@ export default function EmissionsReductionPage() {
             </div>
           </section>
         </Section>
+
+        <Section>
+          <section className="w-full py-0 md:py-3 lg:py-6 bg-white">
+            <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+              <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
+                <div className="space-y-4">
+                  <h2 className="text-4xl font-bold tracking-tighter">
+                    Understanding Hydrogen's Potential
+                  </h2>
+                  <p className="text-gray-600 text-2xl">
+                    We realize the potential for hydrogen to be used in many unique
+                    applications, including the industrial, transportation, and power sectors.
+                    We aim to help our partners reach their emission reduction goals by producing a clean,
+                    sustainable chemical feedstock through our own energy assets. We oversee the entire
+                    transformation of renewable electrons to fuel molecules so that our customers maintain a stable supply of hydrogen,
+                    alleviating them of price fluctuations caused by supply chain limitations. 
+                  </p>
+                </div>
+                <div className="relative aspect-video overflow-hidden rounded-xl">
+                  <img
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Emissions%20reductions.jpg-EwN7gOWxh0dD6uiXrnK2FcvBsPg6Fs.jpeg"
+                    alt="Industrial emissions and clean energy symbolism"
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+        </Section>
         <Section>
           <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
             <div className="container mx-auto px-4 md:px-6 max-w-7xl">
@@ -144,39 +173,6 @@ export default function EmissionsReductionPage() {
             </div>
           </section>
         </Section>
-        <Section>
-          <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
-            <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-              <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
-                <div className="space-y-4">
-                  <h2 className="text-4xl font-bold tracking-tighter">
-                    Understanding Hydrogen's Potential
-                  </h2>
-                  <p className="text-gray-600 text-2xl">
-                    We understand that hydrogen can be used in many unique
-                    applications, and we want to help unlock the true potential
-                    of hydrogen. Hydrogen is widely versatile; it can be used in
-                    numerous applications including the industrial,
-                    transportation, and power sectors.
-                  </p>
-                  <p className="text-gray-600 text-2xl">
-                    If you are affiliated with any of the previously mentioned
-                    sectors, we can help develop your hydrogen project to reduce
-                    emissions.
-                  </p>
-                </div>
-                <div className="relative aspect-video overflow-hidden rounded-xl">
-                  <img
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Emissions%20reductions.jpg-EwN7gOWxh0dD6uiXrnK2FcvBsPg6Fs.jpeg"
-                    alt="Industrial emissions and clean energy symbolism"
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </section>
-        </Section>
-
         <Section>
           <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
             <div className="container mx-auto px-4 md:px-6 max-w-7xl text-center">
