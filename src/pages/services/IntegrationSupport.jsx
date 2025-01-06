@@ -107,7 +107,7 @@ export default function IntegrationSupportPage() {
                 </div>
               </div>
             </div>
-            <div className="container mx-auto px-6 py-9">
+            {/* <div className="container mx-auto px-6 py-9">
                 <motion.div
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
@@ -129,7 +129,7 @@ export default function IntegrationSupportPage() {
                     of hydrogen to our customers.
                   </h3>
                 </motion.div>
-              </div>
+              </div> */}
           </section>
         </Section>
         <Section>

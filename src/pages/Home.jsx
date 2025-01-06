@@ -220,7 +220,7 @@ const HomePage = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h2 className="text-3xl font-bold text-blue-600">
+            <h2 className="text-3xl font-bold text-custom-yellow">
               HDV Fueling
             </h2>
             <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -238,7 +238,7 @@ const HomePage = () => {
                     "FC-HDV is becoming economically competitive with diesel combustion engines as political incentives are implemented.",
                   ].map((item, index) => (
                     <li key={index} className="flex items-center gap-3">
-                      <ArrowRight className="text-blue-600 h-6 w-6 flex-shrink-0" />
+                      <ArrowRight className="text-yellow-400 h-6 w-6 flex-shrink-0" />
                       <span className="text-gray-600 text-1xl">{item}</span>
                     </li>
                   ))}
@@ -272,7 +272,7 @@ const HomePage = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h2 className="text-3xl font-bold text-green-600">
+            <h2 className="text-3xl font-bold text-custom-yellow">
               Industrial Applications
             </h2>
             <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -300,7 +300,7 @@ const HomePage = () => {
                     "Closed-loop processes can be engineered to reduce the demand for water and further improve overall system efficiency.",
                   ].map((item, index) => (
                     <li key={index} className="flex items-center gap-3">
-                      <ArrowRight className="text-green-600 h-6 w-6 flex-shrink-0" />
+                      <ArrowRight className="text-yellow-400 h-6 w-6 flex-shrink-0" />
                       <span className="text-gray-600 text-1xl">{item}</span>
                     </li>
                   ))}

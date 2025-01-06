@@ -24,6 +24,8 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+          <Route index element={<Home />} />
+          <Route path="/california-hydrogen-potential" element={<CaliforniaHydrogenPotential />}/>
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/services">
@@ -37,10 +39,7 @@ export default function App() {
         </Route>
 
         {/* Add the new route */}
-        <Route
-          path="/california-hydrogen-potential"
-          element={<CaliforniaHydrogenPotential />}
-        />
+        <Route path="/california-hydrogen-potential" element={<CaliforniaHydrogenPotential />}/>
       </Routes>
 
       <Footer />
