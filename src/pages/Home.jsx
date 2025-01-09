@@ -124,7 +124,7 @@ const HomePage = () => {
               Discover the opportunities for hydrogen energy production in California.
               Explore how a case study shows the renewable energy potential for hydrogen in California.
             </p>
-            <Link to="/about"
+            <Link to="/california-hydrogen-potential"
               className="text-white bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg text-lg font-medium transition"
             >
               Explore Now
