@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Truck, Factory, Battery, ArrowDown } from "lucide-react";
+import { Link } from "react-router-dom";
 import MainChart from "../components/Charts/MainChart";
 import Navbar from "../components/Navbar";
 import home from "../assets/home/home.jpeg";
@@ -123,12 +124,11 @@ const HomePage = () => {
               Discover the opportunities for hydrogen energy production in California.
               Explore how a case study shows the renewable energy potential for hydrogen in California.
             </p>
-            <a
-              href="/california-hydrogen-potential"
+            <Link to="/about"
               className="text-white bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg text-lg font-medium transition"
             >
               Explore Now
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>
