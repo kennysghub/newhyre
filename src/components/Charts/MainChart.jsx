@@ -6,9 +6,9 @@ const MainChart = () => {
   return (
     <DataProcessor>
       {({ curtailmentData, productionData }) => (
-        <div className="space-y-12 my-16">
+        <div className="space-y-6 my-10">
           <section className="bg-white rounded-lg shadow-lg p-6">
-            <h2 className="text-2xl font-semibold mb-6">
+            <h2 className="text-4xl font-semibold mb-6 text-center">
               Renewable Energy Curtailment
             </h2>
             {curtailmentData && curtailmentData.length > 0 ? (
@@ -21,7 +21,7 @@ const MainChart = () => {
           </section>
 
           <section className="bg-white rounded-lg shadow-lg p-6">
-            <h2 className="text-2xl font-semibold mb-6 ">
+            <h2 className="text-4xl font-semibold mb-6 text-center">
               Theoretical Renewable Hydrogen Production
             </h2>
             {productionData && productionData.length > 0 ? (
