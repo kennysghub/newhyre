@@ -13,14 +13,14 @@ import CaliforniaHydrogenPotential from "./pages/CaliforniaHydrogenPotential"; /
 import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
-  // const location = useLocation();
-  // const isHomePage = location.pathname === "/";
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   return (
     <div>
       {/* Only render Navbar if not on homepage */}
-      {/* <ScrollToTop />
-      {!isHomePage && <Navbar />} */}
+      <ScrollToTop />
+      {!isHomePage && <Navbar />}
 
       <Routes>
         <Route path="/" element={<Home />} />
