@@ -1,8 +1,25 @@
 {
-  "routes": [
-    {
-      "route": "/*",
-      "serve": "/index.html"
-    }
-  ]
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": [
+      "/images/*.{png,jpg,gif,svg,PNG,JPG,GIF,SVG}",
+      "/assets/*",
+      "/data/*",
+      "/*.css",
+      "/*.js"
+    ]
+  },
+  "mimeTypes": {
+    ".json": "text/json",
+    ".css": "text/css",
+    ".js": "text/javascript",
+    ".svg": "image/svg+xml",
+    ".png": "image/png",
+    ".jpg": "image/jpeg",
+    ".PNG": "image/png",
+    ".JPG": "image/jpeg"
+  },
+  "globalHeaders": {
+    "Cache-Control": "no-cache"
+  }
 }
