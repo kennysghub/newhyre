@@ -1,5 +1,5 @@
 import Footer from "./components/Footer";
-import {HashRouter, Routes, Route, useLocation, Link} from "react-router-dom";
+import { HashRouter, Routes, Route, useLocation, Link } from "react-router-dom";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import "./App.css";
@@ -13,19 +13,22 @@ import CaliforniaHydrogenPotential from "./pages/CaliforniaHydrogenPotential"; /
 import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
-  const location = useLocation();
-  const isHomePage = location.pathname === "/";
+  // const location = useLocation();
+  // const isHomePage = location.pathname === "/";
 
   return (
     <div>
       {/* Only render Navbar if not on homepage */}
-      <ScrollToTop />
-      {!isHomePage && <Navbar />}
+      {/* <ScrollToTop />
+      {!isHomePage && <Navbar />} */}
 
       <Routes>
         <Route path="/" element={<Home />} />
-          <Route index element={<Home />} />
-          <Route path="/california-hydrogen-potential" element={<CaliforniaHydrogenPotential />}/>
+        <Route index element={<Home />} />
+        <Route
+          path="/california-hydrogen-potential"
+          element={<CaliforniaHydrogenPotential />}
+        />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/services">
