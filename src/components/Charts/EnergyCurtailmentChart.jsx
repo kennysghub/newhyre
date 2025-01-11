@@ -56,7 +56,13 @@ const EnergyCurtailmentChart = ({ data }) => {
     setChartData(newChartData);
   }, [data, selectedYears, selectedResource]);
 
-  const colors = ["#3498db", "#e74c3c", "#f1c40f", "#9b59b6", "#1abc9c"];
+  const colors = {
+    2019: "#005f99", // Muted blue
+    2020: "#cc4c39", // Muted red
+    2021: "#278033", // Muted green
+    2022: "#7b3e87", // Muted purple
+    2023: "#333333", // Muted gray
+  };
 
   const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
@@ -72,6 +78,14 @@ const EnergyCurtailmentChart = ({ data }) => {
       );
     }
     return null;
+  };
+
+  const getLegendPayload = () => {
+    return selectedYears.map((yearOption) => ({
+      value: `${selectedResource} ${yearOption.value}`,
+      color: colors[yearOption.value],
+      type: "square",
+    }));
   };
 
   return (
@@ -122,12 +136,13 @@ const EnergyCurtailmentChart = ({ data }) => {
               position: "insideLeft",
               offset: -50,
               fill: "#666",
+              fontSize: 20,
             }}
             tick={{ fill: "#666" }}
           />
           <Tooltip content={<CustomTooltip />} />
-          <Legend />
-          {selectedYears.map((yearOption, index) => (
+          <Legend payload={getLegendPayload()} />
+          {selectedYears.map((yearOption) => (
             <Bar
               key={yearOption.value}
               dataKey={`${selectedResource}${yearOption.value}`}
@@ -138,7 +153,7 @@ const EnergyCurtailmentChart = ({ data }) => {
               {chartData.map((entry, entryIndex) => (
                 <Cell
                   key={`cell-${entryIndex}`}
-                  fill={colors[index % colors.length]}
+                  fill={colors[yearOption.value]}
                   opacity={hoveredBar === yearOption.value ? 1 : 0.7}
                 />
               ))}

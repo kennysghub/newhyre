@@ -1,36 +1,57 @@
-import { Leaf } from "lucide-react";
+// import { Leaf } from "lucide-react"; // Import Leaf icon
+// import logo from "../assets/logo.PNG"; // Import the logo
+
+// export default function Footer() {
+//   return (
+//     <footer className="flex items-center justify-between py-0 w-full px-4 md:px-6 border-t">
+//       {/* Left Section: Leaf Icon and Slogan */}
+//       <div className="flex items-center gap-2">
+//         <Leaf className="h-5 w-5 text-green-500" />
+//         <p className="text-xs text-gray-500">Committed to a sustainable future</p>
+//       </div>
+
+//       {/* Center Section: Logo */}
+//       <div className="flex-shrink-0">
+//         <img src={logo} alt="HyRe-Energy" className="h-14 w-auto object-contain" />
+//       </div>
+
+//       {/* Right Section: Copyright Text */}
+//       <div className="text-xs text-gray-500">
+//         © 2024 Hyre Energy LLC. All rights reserved.
+//       </div>
+//     </footer>
+//   );
+// }
+
+import { Leaf } from "lucide-react"; // Import Leaf icon
+import { Linkedin } from "lucide-react"; // Import LinkedIn icon
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col sm:flex-row py-6 w-full shrink-0 items-center justify-between px-4 md:px-6 border-t">
-      <div className="flex items-center gap-4">
-        <div className="flex items-center gap-2">
-          <Leaf className="h-4 w-4 text-green-500" />
-          <p className="text-xs text-gray-500">
-            Committed to a sustainable future
-          </p>
-        </div>
-        <p className="text-xs text-gray-500">
-          © 2024 Hyre Energy LLC. All rights reserved.
-        </p>
+    <footer className="flex items-center justify-between py-4 w-full px-4 md:px-6 border-t">
+      {/* Left Section: Leaf Icon and Slogan */}
+      <div className="flex items-center gap-2">
+        <Leaf className="h-5 w-5 text-green-500" />
+        <p className="text-xs text-gray-500">Committed to a sustainable future</p>
       </div>
 
-      <a
-        href="https://www.linkedin.com/company/hyre-energy-llc/about/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-gray-500 hover:text-green-500 transition-colors"
-      >
-        <span className="sr-only">LinkedIn</span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 30 30"
-          className="h-6 w-6"
-          fill="currentColor"
+      {/* Center Section: LinkedIn Icon */}
+      <div className="flex-shrink-0">
+        <a
+          href="https://www.linkedin.com/company/hyre-energy-llc"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
         >
-          <path d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18c1.105,0,2-0.895,2-2V6C26,4.895,25.105,4,24,4z M10.954,22h-2.95 v-9.492h2.95V22z M9.449,11.151c-0.951,0-1.72-0.771-1.72-1.72c0-0.949,0.77-1.719,1.72-1.719c0.948,0,1.719,0.771,1.719,1.719 C11.168,10.38,10.397,11.151,9.449,11.151z M22.004,22h-2.948v-4.616c0-1.101-0.02-2.517-1.533-2.517 c-1.535,0-1.771,1.199-1.771,2.437V22h-2.948v-9.492h2.83v1.297h0.04c0.394-0.746,1.356-1.533,2.791-1.533 c2.987,0,3.539,1.966,3.539,4.522V22z" />
-        </svg>
-      </a>
+          <Linkedin className="h-6 w-6 text-blue-500 hover:text-blue-700 transition-colors" />
+        </a>
+      </div>
+
+      {/* Right Section: Copyright Text */}
+      <div className="text-xs text-gray-500">
+        © 2024 Hyre Energy LLC. All rights reserved.
+      </div>
     </footer>
   );
 }
+

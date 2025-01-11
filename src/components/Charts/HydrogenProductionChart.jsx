@@ -63,12 +63,13 @@ const HydrogenProductionChart = ({ data }) => {
   }, [data, selectedYears, selectedTech]);
 
   const colors = {
-    2019: ["#3498db", "#2980b9", "#1abc9c"],
-    2020: ["#e74c3c", "#c0392b", "#d35400"],
-    2021: ["#f1c40f", "#f39c12", "#e67e22"],
-    2022: ["#9b59b6", "#8e44ad", "#2c3e50"],
-    2023: ["#1abc9c", "#16a085", "#27ae60"],
+    2019: ["#0074D9", "#7FDBFF", "#39CCCC"], // Blue variations for 2019
+    2020: ["#FF4136", "#FF851B", "#E3C800"], // Warm colors for 2020
+    2021: ["#2ECC40", "#01FF70", "#3D9970"], // Green variations for 2021
+    2022: ["#B10DC9", "#F012BE", "#85144b"], // Purple-pink variations for 2022
+    2023: ["#111111", "#AAAAAA", "#888888"], // Grayscale for 2023
   };
+  
 
   const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
@@ -77,13 +78,28 @@ const HydrogenProductionChart = ({ data }) => {
           <p className="font-bold">{label}</p>
           {payload.map((entry, index) => (
             <p key={index} style={{ color: entry.fill }}>
-              {`${entry.name}: ${entry.value.toFixed(2)} tons`}
+              {`${entry.name}: ${entry.value.toFixed(2)} mtons`}
             </p>
           ))}
         </div>
       );
     }
     return null;
+  };
+
+  const getLegendPayload = () => {
+    const payload = [];
+    selectedYears.forEach((yearOption) => {
+      selectedTech.forEach((tech, techIndex) => {
+        const color = colors[yearOption.value][techIndex];
+        payload.push({
+          value: `${yearOption.value} ${tech}`,
+          color,
+          type: "square",
+        });
+      });
+    });
+    return payload;
   };
 
   return (
@@ -137,16 +153,17 @@ const HydrogenProductionChart = ({ data }) => {
           <XAxis dataKey="month" tick={{ fill: "#666" }} />
           <YAxis
             label={{
-              value: "H2 [tons]",
+              value: "H2 [mtons]",
               angle: -90,
               position: "insideLeft",
               offset: -50,
               fill: "#666",
+              fontSize: 20,
             }}
             tick={{ fill: "#666" }}
           />
           <Tooltip content={<CustomTooltip />} />
-          <Legend />
+          <Legend payload={getLegendPayload()} />
           {selectedYears.flatMap((yearOption) =>
             selectedTech.map((tech) => (
               <Bar
