@@ -96,11 +96,11 @@ export default function ServicesPage() {
                     <div className="flex items-center space-x-4">
                       <ClipboardList className="w-8 h-8 text-blue-600" />
                       <h3 className="text-xl font-bold">
-                        Project Management
+                        Project Development
                       </h3>
                     </div>
                     <p className="text-md text-gray-500">
-                      Comprehensive oversight and implementation
+                      Comprehensive design and implementation
                     </p>
                   </CardHeader>
                   <CardContent className="flex-1 space-y-4">
@@ -115,9 +115,9 @@ export default function ServicesPage() {
                     </Link>
                     <ul className="list-disc list-inside space-y-2 text-md text-gray-600">
                       <li>End-to-end project coordination</li>
-                      <li>System integration expertise</li>
-                      <li>Timeline and resource management</li>
-                      <li>Stakeholder communication</li>
+                      <li>Detailed modeling and system design</li>
+                      <li>Integration expertise for a variety of end-users</li>
+                      <li>Economic forecasting</li>
                     </ul>
                   </CardContent>
                   <CardFooter>
@@ -139,7 +139,7 @@ export default function ServicesPage() {
                       </h3>
                     </div>
                     <p className="text-md text-gray-500">
-                      Strategic pathways to lower emissions
+                      Pathways to lowering emissions with hydrogen
                     </p>
                   </CardHeader>
                   <CardContent className="flex-1 space-y-4">

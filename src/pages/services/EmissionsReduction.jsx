@@ -97,9 +97,9 @@ export default function EmissionsReductionPage() {
         </Section>
 
         <Section>
-          <section className="w-full py-0 md:py-3 lg:py-6 bg-white">
+          <section className="w-full py-6 md:py-12 lg:py-18 bg-white">
             <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-              <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
+              <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
                 <div className="space-y-4">
                   <h2 className="text-4xl font-bold tracking-tighter">
                     Understanding Hydrogen's Potential
@@ -107,10 +107,10 @@ export default function EmissionsReductionPage() {
                   <p className="text-gray-600 text-2xl">
                     We realize the potential for hydrogen to be used in many unique
                     applications, including the industrial, transportation, and power sectors.
-                    We aim to help our partners reach their emission reduction goals by producing a clean,
-                    sustainable chemical feedstock through our own energy assets. We oversee the entire
-                    transformation of renewable electrons to fuel molecules so that our customers maintain a stable supply of hydrogen,
-                    alleviating them of price fluctuations caused by supply chain limitations. 
+                    Our goal is to help our partners reach their emission reduction goals by producing a clean,
+                    sustainable chemical feedstock through renewable energy assets. Overseeing the entire transformation 
+                    of electrons into fuel molecules ensures customers maintain a stable hydrogen supply, free from price 
+                    fluctuations caused by supply chain limitations.
                   </p>
                 </div>
                 <div className="relative aspect-video overflow-hidden rounded-xl">

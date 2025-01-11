@@ -99,45 +99,33 @@ const HomePage = () => {
       </div>
 
       {/* Two-Column Section */}
-      <section className="w-full py-24 bg-gradient-to-r from-blue-50 via-green-50 to-yellow-50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="grid grid-cols-1 lg:grid-cols-2 gap-10"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-          >
-            {/* Left Column */}
-            <div className="space-y-4">
-              <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">
-                Renewable energy provides an opportunity to produce clean fuels
-                for many difficult to decarbonize end-uses. We believe the below
-                three sectors will dominate the hydrogen market.
-              </h2>
-            </div>
+      <section className="w-full py-12 px-8 bg-gradient-to-r from-blue-100 via-green-50 to-yellow-100">
+  <div className="container mx-auto px-4">
+    <motion.div
+      className="flex flex-col items-center text-center"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+    >
+      <h2 className="text-3xl font-bold tracking-tight text-gray-800 sm:text-3xl lg:text-4xl leading-tight mb-6">
+        Leading the Transition to Clean Hydrogen
+      </h2>
+      <p className="text-xl sm:text-2xl text-gray-600 max-w-6xl leading-relaxed">
+        Renewable energy provides an opportunity to produce clean fuels for 
+        many difficult-to-decarbonize end-uses. We believe the following three 
+        sectors will dominate the hydrogen market, paving the way for a sustainable 
+        and green future.
+      </p>
+    </motion.div>
+  </div>
+</section>
 
-            {/* Right Column */}
-            <div className="flex flex-col justify-center items-center">
-              <h2 className="text-3xl font-bold tracking-tighter mb-4 text-center">
-                California Hydrogen Potential
-              </h2>
-              <p className="text-2xl text-gray-600 mb-6 text-center">
-                Discover the opportunities for hydrogen <br /> energy production
-                in California.
-              </p>
-              <Link
-                to="/california-hydrogen-potential"
-                className="text-white bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg text-lg font-medium transition"
-              >
-                Explore Now
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+
+
+
 
       {/* Three Pillars Section */}
-      <section className="w-full py-24 bg-gradient-to-r from-blue-50 via-green-50 to-yellow-50">
+      <section className="w-full py-9 bg-gradient-to-r from-blue-100 via-green-50 to-yellow-100">
         <div className="container mx-auto px-4">
           <motion.div
             className="space-y-10"
@@ -216,7 +204,7 @@ const HomePage = () => {
 
       {/* Just update the styling to match the new design */}
       {/* HDV Fueling Section */}
-      <section id="hdv-fueling" className="w-full py-24 bg-gray-50">
+      <section id="hdv-fueling" className="w-full py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0 }}
@@ -224,7 +212,7 @@ const HomePage = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h2 className="text-3xl font-bold text-custom-yellow">
+            <h2 className="text-3xl font-bold text-custom-yellow text-center">
               HDV Fueling
             </h2>
             <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -272,108 +260,140 @@ const HomePage = () => {
       {/* Industrial Applications Section */}
       <section
         id="industrial-decarbonization"
-        className="w-full py-24 bg-white"
+        className="w-full py-12 bg-gray-25"
       >
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="space-y-8"
-          >
-            <h2 className="text-3xl font-bold text-custom-yellow">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="space-y-8"
+        >
+          <div className="flex flex-col items-center">
+            <h2 className="text-3xl font-bold text-custom-yellow text-center mb-4">
               Industrial Applications
             </h2>
-            <div className="grid md:grid-cols-2 gap-12 items-start">
-              <motion.div
-                className="relative order-2 md:order-1"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                <img
-                  src={industrialDecarbonization}
-                  alt="Industrial Decarbonization"
-                  className="w-full h-full object-cover rounded-xl shadow-xl border-2 "
-                />
-              </motion.div>
-              <div className="space-y-6 order-1 md:order-2">
-                <p className="text-2xl font-bold">
-                  Heavy industries are major contributors to GHG emissions and
-                  are challenging to decarbonize due to the limits of
-                  electrification. However, many of the largest emitters can
-                  realistically achieve decarbonization with sustainable
-                  hydrogen solutions.
-                </p>
-                <ul className="space-y-4">
-                  {[
-                    "Heavy industries contribute 23% of the total U.S. CO₂ emissions with contributions from iron/steel (7%), chemicals (20%), cement (2%), and oil refining (17%).",
-                    "According to US DOE, the technological pillars of industrial decarbonization are energy efficiency, electrification, low-carbon fuels, and CCUS.",
-                    "Hydrogen production can be combined with on-site carbon capture and Fischer-Tropsch processes to produce sustainable aviation fuels and/or other valuable hydrocarbons.",
-                    "High temperature electrolysis can be thermally integrated with industrial processes to produce emission-free hydrogen with reduced primary energy consumption sourced entirely from renewable energy sources.",
-                    "Closed-loop processes can be engineered to reduce the demand for water and further improve overall system efficiency.",
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-center gap-3">
-                      <ArrowRight className="text-yellow-400 h-6 w-6 flex-shrink-0" />
-                      <span className="text-gray-600 text-1xl">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          </div>
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            <motion.div
+              className="relative order-2 md:order-1"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              <img
+                src={industrialDecarbonization}
+                alt="Industrial Decarbonization"
+                className="w-full h-full object-cover rounded-xl shadow-xl border-2"
+              />
+            </motion.div>
+            <div className="space-y-6 order-1 md:order-2">
+              <p className="text-2xl font-bold">
+                Heavy industries are major contributors to GHG emissions and are
+                challenging to decarbonize due to the limits of electrification.
+                However, many of the largest emitters can realistically achieve
+                decarbonization with sustainable hydrogen solutions.
+              </p>
+              <ul className="space-y-4">
+                {[
+                  "Heavy industries contribute 23-30% of the total U.S. CO₂ emissions with major contributions coming from iron/steel, cement, chemical production, and oil refining.",
+                  "These sectors rely on chemical feedstocks, rendering total electrification unfeasible; however, electrolytic hydrogen provides a viable pathway to integrate renewable electricity into these processes.",
+                  "Hydrogen production can be combined with on-site carbon capture and Fischer-Tropsch processes to produce sustainable aviation fuels and/or other valuable hydrocarbons.",
+                  "High temperature electrolysis can be thermally integrated with industrial processes to produce emission-free hydrogen with reduced primary energy consumption sourced entirely from renewable energy sources.",
+                  "Closed-loop processes can be engineered to reduce the demand for water and further improve overall system efficiency.",
+                ].map((item, index) => (
+                  <li key={index} className="flex items-center gap-3">
+                    <ArrowRight className="text-yellow-400 h-6 w-6 flex-shrink-0" />
+                    <span className="text-gray-600 text-1xl">{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
+      </div>
       </section>
-      <section id="energy-storage" className="w-full py-24 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="space-y-8"
-          >
-            <h2 className="text-3xl font-bold text-custom-yellow">
-              Energy Storage Solutions
+      <section id="energy-storage" className="w-full py-12 bg-gray-50">
+  <div className="container mx-auto px-4">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      className="space-y-8"
+    >
+      <h2 className="text-3xl font-bold text-custom-yellow text-center">
+        Energy Storage Solutions
+      </h2>
+      <div className="grid md:grid-cols-2 gap-12 items-start">
+        {/* Left Column */}
+        <div className="space-y-6">
+          <p className="text-2xl font-bold">
+            We provide hydrogen solutions to enable long-duration energy
+            storage and distribution, supporting the integration of renewable
+            energy sources into the grid.
+          </p>
+          <ul className="space-y-4 text-1xl">
+            {[
+              "Traditional fossil fuel generation, making up 60.0% of 2023 total U.S. electricity generation, is dispatchable to match the changing load demand without energy storage.",
+              "Achieving the 100% zero emissions grid targeted by state and federal agencies requires massive energy storage due to the inherent intermittency of renewable energy sources.",
+              "Utility-scale battery storage of the required capacity is not feasible with current technologies due to material limitations, self-discharge issues, and the inseparability of power and energy densities.",
+              "Sustainably produced hydrogen can be stored in existing natural gas infrastructure, depleted oil wells, underground caverns, or in above-ground storage tanks.",
+              "Stored hydrogen can be reconverted to electricity via fuel cells or combustion in existing power production facilities.",
+              "Energy storage systems utilizing a fuel cell for power reconversion offer higher electrical efficiencies of 60-80% and drastically lower emissions compared to traditional fossil fuel methods.",
+            ].map((item, index) => (
+              <li key={index} className="flex items-center gap-3">
+                <ArrowRight className="text-yellow-400 h-6 w-6 flex-shrink-0" />
+                <span className="text-gray-600 text-1xl">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Right Column Split */}
+        <div className="flex flex-col h-full">
+          {/* Image Section */}
+          <div className="relative h-full">
+            <motion.img
+              src={energyStorage}
+              alt="Energy Storage Solutions"
+              className="w-full h-full object-cover rounded-xl shadow-xl border-2"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            />
+          </div>
+
+          {/* Link Section Matching Image Width */}
+          <div className="mt-4 flex flex-col justify-center items-center bg-white rounded-lg shadow-md p-4 w-full">
+            <h2 className="text-xl font-bold tracking-tighter mb-2 text-center">
+              California Clean Hydrogen Potential
             </h2>
-            <div className="grid md:grid-cols-2 gap-12 items-start">
-              <div className="space-y-6">
-                <p className="text-2xl font-bold">
-                  We provide hydrogen solutions to enable long-duration energy
-                  storage and distribution, supporting the integration of
-                  renewable energy sources into the grid.
-                </p>
-                <ul className="space-y-4 text-1xl">
-                  {[
-                    "Traditional fossil fuel generation, making up 60.0% of 2023 total U.S. electricity generation, is dispatchable to match the changing load demand without energy storage.",
-                    "Achieving the 100% zero emissions grid targeted by state and federal agencies requires massive energy storage due to the inherent intermittency of renewable energy sources.",
-                    "Utility-scale battery storage of the required capacity is not feasible with current technologies due to material limitations, self-discharge issues, and the inseparability of power and energy densities.",
-                    "Sustainably produced hydrogen can be stored in existing natural gas infrastructure, depleted oil wells, underground caverns, or in above-ground storage tanks.",
-                    "Stored hydrogen can be reconverted to electricity via fuel cells or combustion in existing power production facilities.",
-                    "Energy storage systems utilizing a fuel cell for power reconversion offer higher electrical efficiencies of 60-80% and drastically lower emissions compared to traditional fossil fuel methods.",
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-center gap-3">
-                      <ArrowRight className="text-yellow-400 h-6 w-6 flex-shrink-0" />
-                      <span className="text-gray-600 text-1xl">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="relative h-auto aspect-[4/3]">
-                {" "}
-                {/* Updated container */}
-                <motion.img
-                  src={energyStorage}
-                  alt="Energy Storage Solutions"
-                  className="w-full h-full object-cover rounded-xl shadow-xl border-2"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                />
-              </div>
-            </div>
-          </motion.div>
+            <p className="text-base text-gray-600 mb-4 text-center">
+              Discover the opportunities for hydrogen <br /> energy production
+              in California.
+            </p>
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.3 }}
+              className="w-full flex justify-center"
+            >
+              <Link
+                to="/california-hydrogen-potential"
+                className="text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg text-sm font-medium transition"
+              >
+                Explore Now
+              </Link>
+            </motion.div>
+          </div>
         </div>
-      </section>
+      </div>
+    </motion.div>
+  </div>
+</section>
+
+
+
+
       {/* Market Growth Section */}
-      <section className="w-full py-10 bg-gray-50">
+      <section className="w-full py-3 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0 }}
@@ -381,7 +401,7 @@ const HomePage = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h3 className="text-3xl font-bold tracking-tighter">
+            <h3 className="text-3xl font-bold tracking-tighter text-center">
               With the above 3 markets in place, demand for hydrogen is expected
               to increase dramatically over the next 20 years, leading to a
               significant decrease in the overall levelized cost of hydrogen

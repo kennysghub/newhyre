@@ -39,8 +39,8 @@ const Icon = ({ name }) => {
     Search: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
+        width="42"
+        height="42"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -55,8 +55,8 @@ const Icon = ({ name }) => {
     FileText: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
+        width="42"
+        height="42"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -90,8 +90,8 @@ const Icon = ({ name }) => {
     Cog: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
+        width="42"
+        height="42"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -118,8 +118,8 @@ const Icon = ({ name }) => {
     BarChart2: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
+        width="42"
+        height="42"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -135,8 +135,8 @@ const Icon = ({ name }) => {
     MessageCircle: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
+        width="42"
+        height="42"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -150,8 +150,8 @@ const Icon = ({ name }) => {
     LifeBuoy: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
+        width="42"
+        height="42"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -221,7 +221,7 @@ export default function TechnologyConsultingPage() {
                   </p>
                 </Card>
                 <Card>
-                  <div className="mb-4 text-yellow-600">
+                  <div className="w-12 h-12 text-yellow-600">
                     <Icon name="BarChart2" />
                   </div>
                   <h3 className="text-lg font-semibold mb-2">Analyze</h3>
@@ -231,7 +231,7 @@ export default function TechnologyConsultingPage() {
                   </p>
                 </Card>
                 <Card>
-                  <div className="mb-4 text-yellow-600">
+                  <div className="w-12 h-12 text-yellow-600">
                     <Icon name="MessageCircle" />
                   </div>
                   <h3 className="text-lg font-semibold mb-2">Advise</h3>
@@ -241,7 +241,7 @@ export default function TechnologyConsultingPage() {
                   </p>
                 </Card>
                 <Card>
-                  <div className="mb-4 text-yellow-600">
+                  <div className="w-12 h-12 text-yellow-600">
                     <Icon name="LifeBuoy" />
                   </div>
                   <h3 className="text-lg font-semibold mb-2">Support</h3>
