@@ -89,7 +89,6 @@ const HomePage = () => {
           </div>
         </motion.div>
       </div>
-
       {/* Three Pillars Section */}
       <section className="w-full py-24 bg-gradient-to-r from-blue-50 via-green-50 to-yellow-50">
         <div className="container mx-auto px-4">
@@ -175,9 +174,7 @@ const HomePage = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Keep your existing sections for HDV Fueling, Industrial Applications, and Energy Storage */}
-
       {/* Just update the styling to match the new design */}
       {/* HDV Fueling Section */}
       <section id="hdv-fueling" className="w-full py-24 bg-gray-50">
@@ -229,7 +226,6 @@ const HomePage = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Industrial Applications Section */}
       <section
         id="industrial-decarbonization"
@@ -333,7 +329,6 @@ const HomePage = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Market Growth Section */}
       <section className="w-full py-24 bg-gray-50">
         <div className="container mx-auto px-4">
