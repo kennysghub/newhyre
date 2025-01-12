@@ -263,7 +263,7 @@ export default function TechnologyConsultingPage() {
                   <h2 className="text-2xl font-bold tracking-tighter sm:text-4xl">
                     Navigating the Evolving Hydrogen Market
                   </h2>
-                  <p className="text-2xl text-gray-600">
+                  <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600">
                   The commercialized market of hydrogen technologies is always evolving. 
                   We can provide technical advice on hydrogen equipment and integrated system designs 
                   to de-risk your investment. We can advise on hydrogen project proposals and offer 

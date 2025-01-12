@@ -104,7 +104,7 @@ export default function EmissionsReductionPage() {
                   <h2 className="text-4xl font-bold tracking-tighter">
                     Understanding Hydrogen's Potential
                   </h2>
-                  <p className="text-gray-600 text-2xl">
+                  <p className="text-gray-600 text-base sm:text-lg md:text-xl lg:text-2xl">
                     We realize the potential for hydrogen to be used in many unique
                     applications, including the industrial, transportation, and power sectors.
                     Our goal is to help our partners reach their emission reduction goals by producing a clean,

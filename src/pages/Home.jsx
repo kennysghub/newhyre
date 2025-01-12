@@ -8,7 +8,7 @@ import home from "../assets/home/home.jpeg";
 import energyStorage from "../assets/home/energy-storage.png";
 import hvdFueling from "../assets/home/hvd-fueling.jpeg";
 import industrialDecarbonization from "../assets/home/industrial decarb2.png";
-import H2forecast from "../assets/projected-H2-demand.png";
+import H2forecast from "../assets/projected H2 demand.png";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -58,11 +58,11 @@ const HomePage = () => {
         {/* Hero Content */}
 
         <motion.div
-          className="relative z-10 container mx-auto px-4 h-full flex items-center"
+          className="relative z-10 container mx-auto px-4 h-full flex items-center mb-12"
           initial="initial"
           animate="animate"
         >
-          <div className="space-y-8 max-w-2xl">
+          <div className="space-y-8 max-w-4xl">
             <motion.div className="space-y-2" variants={fadeInUp}>
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-white">
                 Hyre Energy LLC
@@ -98,16 +98,17 @@ const HomePage = () => {
         </motion.div>
       </div>
 
-      {/* Two-Column Section */}
-      <section className="w-full py-12 px-8 bg-gradient-to-r from-blue-100 via-green-50 to-yellow-100">
-  <div className="container mx-auto px-4">
-    <motion.div
-      className="flex flex-col items-center text-center"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-    >
-      <h2 className="text-3xl font-bold tracking-tight text-gray-800 sm:text-3xl lg:text-4xl leading-tight mb-6">
+      {/* Three Pillars Intro */}
+    <section className="w-full py-16 px-8 bg-gradient-to-r from-blue-100 via-green-50 to-yellow-100">
+    <div className="container mx-auto px-4">
+      <motion.div
+        className="flex flex-col items-center text-left"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+      >
+    <div className="max-w-6xl mx-auto"> {/* Added container with reduced width */}
+      <h2 className="text-3xl text-center font-bold tracking-tight text-gray-800 sm:text-3xl lg:text-4xl leading-tight mb-6">
         Leading the Transition to Clean Hydrogen
       </h2>
       <p className="text-xl sm:text-2xl text-gray-600 max-w-6xl leading-relaxed">
@@ -116,13 +117,10 @@ const HomePage = () => {
         sectors will dominate the hydrogen market, paving the way for a sustainable 
         and green future.
       </p>
+    </div>
     </motion.div>
   </div>
-</section>
-
-
-
-
+  </section>
 
       {/* Three Pillars Section */}
       <section className="w-full py-9 bg-gradient-to-r from-blue-100 via-green-50 to-yellow-100">
@@ -200,9 +198,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Keep your existing sections for HDV Fueling, Industrial Applications, and Energy Storage */}
-
-      {/* Just update the styling to match the new design */}
       {/* HDV Fueling Section */}
       <section id="hdv-fueling" className="w-full py-12 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -212,7 +207,7 @@ const HomePage = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h2 className="text-3xl font-bold text-custom-yellow text-center">
+            <h2 className="text-3xl font-bold text-custom-yellow text-left">
               HDV Fueling
             </h2>
             <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -269,8 +264,8 @@ const HomePage = () => {
           viewport={{ once: true }}
           className="space-y-8"
         >
-          <div className="flex flex-col items-center">
-            <h2 className="text-3xl font-bold text-custom-yellow text-center mb-4">
+          <div className="flex flex-col items-right">
+            <h2 className="text-3xl font-bold text-custom-yellow text-right mb-4">
               Industrial Applications
             </h2>
           </div>
@@ -320,7 +315,7 @@ const HomePage = () => {
       viewport={{ once: true }}
       className="space-y-8"
     >
-      <h2 className="text-3xl font-bold text-custom-yellow text-center">
+      <h2 className="text-3xl font-bold text-custom-yellow text-left">
         Energy Storage Solutions
       </h2>
       <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -388,12 +383,10 @@ const HomePage = () => {
     </motion.div>
   </div>
 </section>
-
-
-
+      {/* CA H2 Potential Section */}
 
       {/* Market Growth Section */}
-      <section className="w-full py-3 bg-gray-50">
+      <section className="w-full py-3 bg-gray-25">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0 }}
@@ -401,15 +394,16 @@ const HomePage = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h3 className="text-3xl font-bold tracking-tighter text-center">
+          <div className="max-w-6xl mx-auto"> {/* Added container with reduced width */}
+            <h3 className="text-3xl font-bold tracking-tighter text-left">
               With the above 3 markets in place, demand for hydrogen is expected
               to increase dramatically over the next 20 years, leading to a
               significant decrease in the overall levelized cost of hydrogen
               (LCOH).
             </h3>
+          </div>
           </motion.div>
         </div>
-        {/* Add space between sections */}
         <div className="h-16"></div> {/* Spacer with 16px height */}
         {/* LCOH Plot */}
         <div className="container mx-auto px-4">
@@ -433,45 +427,45 @@ const HomePage = () => {
         </div>
       </section>
       {/* References Section */}
-      <motion.section
-        className="w-full py-24 bg-white"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-      >
-        <div className="container mx-auto px-4">
-          <div className="rounded-xl p-6 shadow-lg">
-            <h2 className="text-3xl font-bold tracking-tighter mb-4">
-              References
-            </h2>
-            <ul className="list-disc list-inside space-y-2">
-              <li className="text-1xl text-gray-700">
-                September H2IQ Hour: Decarbonizing Heavy-Duty Vehicles. (2023).
-                https://www.energy.gov/eere/fuelcells/september-h2iq-hour-decarbonizing-heavy-duty-vehicles
-              </li>
-              <li className="text-1xl text-gray-700">
-                Department of Energy (2022). Doe Industrial Decarbonization
-                Roadmap.
-                https://www.energy.gov/industrial-technologies/doe-industrial-decarbonization-roadmap
-              </li>
-              <li className="text-1xl text-gray-700">
-                Electric Power Monthly. (2024).
-                https://www.eia.gov/electricity/monthly/current_month/november2024.pdf
-              </li>
-              <li className="text-1xl text-gray-700">
-                International Energy Agency (2024). Global Hydrogen Review.
-                https://www.iea.org/reports/global-hydrogen-review-2024
-              </li>
-              <li className="text-1xl text-gray-700">
-                Saeedmanesh, A., Mac Kinnon, M. A., & Brouwer, J. (2018).
-                Hydrogen is essential for sustainability. Current Opinion in
-                Electrochemistry, 12, 166–181.
-                https://doi.org/10.1016/j.coelec.2018.11.009
-              </li>
-            </ul>
+        <motion.section
+          className="w-full py-24 bg-gray-50"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+        >
+          <div className="container mx-auto px-4">
+            <div className="rounded-xl p-6 ">
+              <h2 className="text-3xl font-bold tracking-tighter mb-4">
+                References
+              </h2>
+              <ul className="list-disc list-inside space-y-2">
+                <li className="text-sm text-gray-700">
+                  September H2IQ Hour: Decarbonizing Heavy-Duty Vehicles. (2023).
+                  https://www.energy.gov/eere/fuelcells/september-h2iq-hour-decarbonizing-heavy-duty-vehicles
+                </li>
+                <li className="text-sm text-gray-700">
+                  Department of Energy (2022). Doe Industrial Decarbonization
+                  Roadmap.
+                  https://www.energy.gov/industrial-technologies/doe-industrial-decarbonization-roadmap
+                </li>
+                <li className="text-sm text-gray-700">
+                  Electric Power Monthly. (2024).
+                  https://www.eia.gov/electricity/monthly/current_month/november2024.pdf
+                </li>
+                <li className="text-sm text-gray-700">
+                  International Energy Agency (2024). Global Hydrogen Review.
+                  https://www.iea.org/reports/global-hydrogen-review-2024
+                </li>
+                <li className="text-sm text-gray-700">
+                  Saeedmanesh, A., Mac Kinnon, M. A., & Brouwer, J. (2018).
+                  Hydrogen is essential for sustainability. Current Opinion in
+                  Electrochemistry, 12, 166–181.
+                  https://doi.org/10.1016/j.coelec.2018.11.009
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </motion.section>
+        </motion.section>
     </div>
   );
 };

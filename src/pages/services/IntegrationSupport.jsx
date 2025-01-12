@@ -27,7 +27,7 @@ export default function IntegrationSupportPage() {
             <div className="container mx-auto max-w-7xl px-4 md:px-6">
               <div className="flex flex-col items-center text-center space-y-4">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white">
-                  Project Management
+                  Project Development
                 </h1>
                 <p className="max-w-[900px] text-blue-100 md:text-3xl font-bold">
                   Streamlining hydrogen project development with comprehensive
@@ -58,7 +58,7 @@ export default function IntegrationSupportPage() {
           <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
             <div className="container mx-auto px-4 md:px-6 max-w-7xl">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none mb-8 text-center">
-                Our Project Management Approach
+                Our Project Development Approach
               </h2>
               <div className="grid gap-6 lg:grid-cols-4">
                 <div className="bg-white p-6 rounded-lg shadow-md">
@@ -140,10 +140,10 @@ export default function IntegrationSupportPage() {
                   <h2 className="text-xl font-bold tracking-tighter sm:text-3xl">
                     The Challenge of Hydrogen Projects
                   </h2>
-                  <p className="text-gray-600 text-2xl">
+                  <p className="text-gray-600 text-base sm:text-lg md:text-xl lg:text-2xl ">
                   Hydrogen projects involve new and constantly emerging technologies that require fundamental knowledge to safely operate and maintain. The integration of these emerging technologies with established technologies, such as balance of plant equipment, is not often available through the original equipment manufacturers (OEMs).
                   </p>
-                  <p className="text-gray-600 text-2xl">
+                  <p className="text-gray-600 text-base sm:text-lg md:text-xl lg:text-2xl">
                     There is no one-stop, turn-key solution due to
                     site-specific requirements and countless combinations of
                     technologies to achieve a certain end goal.
@@ -153,13 +153,13 @@ export default function IntegrationSupportPage() {
                   <h2 className="text-xl font-bold tracking-tighter sm:text-3xl">
                     Our Solution
                   </h2>
-                  <p className="text-gray-600 text-2xl">
+                  <p className="text-gray-600 text-base sm:text-lg md:text-xl lg:text-2xl">
                     Hydrogen projects would normally require multiple expensive
                     engineering companies, but we can streamline project
                     development. We integrate and manage all technologies unique
                     to a hydrogen project, including but not limited to:
                   </p>
-                  <ul className="list-disc list-inside space-y-2 text-2xl text-gray-600">
+                  <ul className="list-disc list-inside space-y-2 text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600">
                     <li>PEM fuel cells and electrolyzers</li>
                     <li>Alkaline electrolyzers</li>
                     <li>Solid-oxide fuel cells and electrolyzers</li>

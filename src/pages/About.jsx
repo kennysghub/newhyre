@@ -43,9 +43,9 @@ export default function About() {
 
         {/* Core Beliefs Section */}
         <Section>
-          <section className="w-full py-12 md:py-24 lg:py-32">
+          <section className="w-full py-12 md:py-14 lg:py-20">
             <div className="container mx-auto max-w-7xl px-4 md:px-6">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl mb-12 text-center">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl mb-10 text-center">
                 Our Core Beliefs
               </h2>
               <div className="space-y-12 max-w-6xl mx-auto">
@@ -116,7 +116,7 @@ export default function About() {
                       {belief.icon}
                       <h3 className="text-2xl font-bold">{belief.title}</h3>
                     </div>
-                    <p className="text-2xl text-gray-600 leading-relaxed">
+                    <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 leading-relaxed">
                       {belief.content}
                     </p>
                   </div>
@@ -128,22 +128,22 @@ export default function About() {
 
         {/* Team Section */}
         <Section>
-          <section className="w-full py-12 md:py-24 lg:py-32 bg-blue-50">
+          <section className="w-full py-6 md:py-14 lg:py-20 bg-blue-50">
             <div className="container mx-auto max-w-7xl px-4 md:px-6">
-              <div className="space-y-10">
-                <div className="text-center space-y-4">
+              <div className="space-y-5">
+                <div className="text-center space-y-5">
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
                     Meet the Founding Team
                   </h2>
-                  <p className="max-w-[900px] mx-auto text-gray-600 text-2xl">
+                  <p className="max-w-[900px] mx-auto text-gray-600 text-base sm:text-lg md:text-xl lg:text-2xl text-left">
                     A group of students from the National Fuel Cell Research
                     Center (NFCRC) at the University of California, Irvine
                     (UCI).
                   </p>
                 </div>
 
-                <div className="max-w-[900px] mx-auto text-center">
-                  <p className="text-gray-600  text-2xl">
+                <div className="max-w-[900px] mx-auto text-left">
+                  <p className="text-gray-600 text-base sm:text-lg md:text-xl lg:text-2xl">
                     Our team comprises hydrogen experts with experimental and
                     technical research experience with connections to the energy
                     industry. We are a highly motivated group with extreme
@@ -163,15 +163,14 @@ export default function About() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <h3 className="text-xl font-bold">Bobby Laviguer</h3>
-                      <p className="text-blue-600 font-medium">
+                      <h3 className="text-2xl font-bold">Bobby Laviguer</h3>
+                      <p className="text-blue-600 text-xl font-bold">
                         Co-Founder, CEO
                       </p>
                       <div className="space-y-1 text-sm-xl1 text-gray-600">
                         <p>MS in Mechanical Engineering</p>
                         <p>University of California, Irvine, 2025</p>
-                        <p className="pt-2">BS in Mechanical Engineering</p>
-                        <p>w/ Specialization in Energy Systems</p>
+                        <p className="pt-2">BS in Mechanical Engineering w/ Specialization in Energy Systems</p>
                         <p>University of California, Irvine, 2021</p>
                       </div>
                     </div>
@@ -187,15 +186,14 @@ export default function About() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <h3 className="text-xl font-bold">Christian Rose</h3>
-                      <p className="text-blue-600 font-medium">
+                      <h3 className="text-2xl font-bold">Christian Rose</h3>
+                      <p className="text-blue-600 text-xl font-bold">
                         Co-Founder, CTO
                       </p>
                       <div className="space-y-1 text-sm-xl1 text-gray-600">
                         <p>MS in Mechanical Engineering</p>
                         <p>University of California, Irvine, 2025</p>
-                        <p className="pt-2">BS in Mechanical Engineering</p>
-                        <p>w/ Specialization in Energy Engineering</p>
+                        <p className="pt-2">BS in Mechanical Engineering w/ Specialization in Energy Engineering</p>
                         <p>Southern Illinois University Carbondale, 2022</p>
                         <p className="pt-2">BS in Physics</p>
                         <p>Southern Illinois University Carbondale, 2022</p>
@@ -210,13 +208,13 @@ export default function About() {
 
         {/* CTA Section */}
         <Section>
-          <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
+          <section className="w-full py-12 md:py-14 lg:py-20 bg-white">
             <div className="container mx-auto max-w-7xl px-4 md:px-6">
               <div className="max-w-3xl mx-auto text-center">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl mb-4">
                   Join Us in Shaping the Future of Energy
                 </h2>
-                <p className="max-w-[800px] mx-auto text-gray-600 text-2xl mb-8">
+                <p className="max-w-[800px] mx-auto text-gray-600 text-base sm:text-lg md:text-xl lg:text-2xl mb-8 ">
                   Whether you're a potential partner, investor, or someone
                   passionate about clean energy, we invite you to be part of our
                   journey towards a sustainable, hydrogen-powered future.
