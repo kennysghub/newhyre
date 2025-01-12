@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { BuildingOffice2Icon, EnvelopeIcon } from "@heroicons/react/24/outline";
+import axios from "axios";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -36,17 +37,28 @@ export default function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const emailBody = `
-      Name: ${formData.firstName} ${formData.lastName}
-      Email: ${formData.email}
-      Phone: ${formData.phoneNumber}
-      Message: ${formData.message}
-    `;
-    window.location.href = `mailto:hyre-energy@hyre-energy.com?subject=Message from ${
-      formData.firstName
-    }&body=${encodeURIComponent(emailBody)}`;
+  
+    try {
+      const response = await axios.post("http://localhost:3001/send-email", formData);
+  
+      if (response.data.success) {
+        alert("Email sent successfully!");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phoneNumber: "",
+          message: "",
+        });
+      } else {
+        alert("Failed to send email. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("An error occurred while sending the email.");
+    }
   };
 
   return (
@@ -254,183 +266,3 @@ export default function Contact() {
     </motion.div>
   );
 }
-/* import React, { useState } from "react";
-import { motion } from "framer-motion";
-import axios from "axios";
-import { BuildingOffice2Icon, EnvelopeIcon } from "@heroicons/react/24/outline";
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-    },
-  },
-};
-
-export default function Contact() {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phoneNumber: "",
-    message: "",
-  });
-  const [status, setStatus] = useState("");
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus("");
-
-    try {
-      const response = await axios.post("/send-email", {
-        name: `${formData.firstName} ${formData.lastName}`,
-        email: formData.email,
-        message: `Phone: ${formData.phoneNumber}\n\nMessage: ${formData.message}`,
-      });
-
-      if (response.data.success) {
-        setStatus("Your message has been sent successfully!");
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phoneNumber: "",
-          message: "",
-        });
-      }
-    } catch (error) {
-      console.error("Error sending email:", error);
-      setStatus("An error occurred while sending your message. Please try again.");
-    }
-  };
-
-  return (
-    <motion.div
-      className="relative isolate bg-white"
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants}
-    >
-      <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
-        <motion.div
-          className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48"
-          variants={itemVariants}
-        >
-          <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-            <h2 className="text-3xl font-bold tracking-tight text-custom-blue">
-              Let's work together
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Join us in the hydrogen revolution, paving the way for sustainable living and renewable energy solutions.
-            </p>
-            <dl className="mt-10 space-y-4 text-base leading-7 text-gray-600">
-              <div className="flex gap-x-4">
-                <dt className="flex-none">
-                  <BuildingOffice2Icon
-                    className="h-7 w-6 text-custom-yellow"
-                    aria-hidden="true"
-                  />
-                </dt>
-                <dd>Irvine, California</dd>
-              </div>
-              <div className="flex gap-x-4">
-                <dt className="flex-none">
-                  <EnvelopeIcon
-                    className="h-7 w-6 text-custom-yellow"
-                    aria-hidden="true"
-                  />
-                </dt>
-                <dd>
-                  <a
-                    className="hover:text-gray-900"
-                    href="mailto:hyre-energy@hyre-energy.com"
-                  >
-                    marketing@hyre-energy.com
-                  </a>
-                </dd>
-              </div>
-            </dl>
-          </div>
-        </motion.div>
-        <motion.form
-          onSubmit={handleSubmit}
-          className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"
-          variants={itemVariants}
-        >
-          <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
-            <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-              {["firstName", "lastName", "email", "phoneNumber"].map((field, idx) => (
-                <motion.div
-                  key={field}
-                  className={field === "phoneNumber" ? "sm:col-span-2" : ""}
-                  variants={itemVariants}
-                >
-                  <label
-                    htmlFor={field}
-                    className="block text-sm font-semibold leading-6 text-gray-900"
-                  >
-                    {field.replace(/([A-Z])/g, " $1").replace(/^./, (str) => str.toUpperCase())}
-                  </label>
-                  <div className="mt-2.5">
-                    <input
-                      type={field === "email" ? "email" : "text"}
-                      name={field}
-                      id={field}
-                      className="block w-full rounded-md px-3.5 py-2"
-                      value={formData[field]}
-                      onChange={handleChange}
-                    />
-                  </div>
-                </motion.div>
-              ))}
-              <motion.div className="sm:col-span-2" variants={itemVariants}>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-semibold leading-6 text-gray-900"
-                >
-                  Message
-                </label>
-                <div className="mt-2.5">
-                  <textarea
-                    name="message"
-                    id="message"
-                    rows={4}
-                    className="block w-full rounded-md px-3.5 py-2"
-                    value={formData.message}
-                    onChange={handleChange}
-                  ></textarea>
-                </div>
-              </motion.div>
-            </div>
-            <motion.div className="mt-8 flex justify-end" variants={itemVariants}>
-              <motion.button
-                type="submit"
-                className="rounded-md bg-custom-yellow px-3.5 py-2.5"
-              >
-                Send message
-              </motion.button>
-            </motion.div>
-          </div>
-          {status && <p className="mt-4 text-sm text-gray-600">{status}</p>}
-        </motion.form>
-      </div>
-    </motion.div>
-  );
-} */
