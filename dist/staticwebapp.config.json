@@ -33,15 +33,7 @@
       "rewrite": "/index.html"
     },
     {
-      "route": "/services/integration-support",
-      "rewrite": "/index.html"
-    },
-    {
-      "route": "/services/emissions-reduction",
-      "rewrite": "/index.html"
-    },
-    {
-      "route": "/services/technology-consulting",
+      "route": "/services/*",
       "rewrite": "/index.html"
     },
     {
