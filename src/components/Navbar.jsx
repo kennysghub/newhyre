@@ -20,7 +20,7 @@ export default function Navbar() {
     isServicesPage ||
     isIntegrationSupportPage ||
     isEmissionsReductionPage ||
-    isTechnologyConsultingPage;
+    isTechnologyConsultingPage ;
 
   const navbarStyle = usePageBackground
     // // ? "bg-gradient-to-b from-blue-600/80 via-green-500/40 to-transparent"
@@ -34,7 +34,7 @@ export default function Navbar() {
     ? "text-white hover:text-blue-100"
     : "text-gray-800 hover:text-blue-600";
 
-  const mobileMenuStyle = usePageBackground ? "bg-blue-600/95" : "bg-blue-300/95";
+  const mobileMenuStyle = usePageBackground ? "bg-blue-600/95" : "bg-blue-600/95";
 
   return (
     <Disclosure as="nav" className="w-full z-50">

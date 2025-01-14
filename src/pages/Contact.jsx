@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { BuildingOffice2Icon, EnvelopeIcon } from "@heroicons/react/24/outline";
-import axios from "axios";
+import { EmailClient } from "@azure/communication-email";
+
+const connectionString =
+  "endpoint=https://hyre-comm-service.unitedstates.communication.azure.com/;accesskey=4uUDcjePiRAHrDL82kvww7ohKzYgoqgNZcVLxoZl7sglM8vuC5OdJQQJ99BAACULyCpM03X4AAAAAZCS3xeU";
+const client = new EmailClient(connectionString);
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -40,11 +44,41 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
   
+    const emailMessage = {
+      senderAddress: "DoNotReply@hyre-energy.com",
+      content: {
+        subject: "Contact Page Submission ",
+        plainText: `
+          Name: ${formData.firstName} ${formData.lastName}
+          Email: ${formData.email}
+          Phone: ${formData.phoneNumber}
+          Message: ${formData.message}
+        `,
+        html: `
+          <html>
+            <body>
+              <h1>Contact Page Submission Details</h1>
+              <p><strong>Name:</strong> ${formData.firstName} ${formData.lastName}</p>
+              <p><strong>Email:</strong> ${formData.email}</p>
+              <p><strong>Phone:</strong> ${formData.phoneNumber}</p>
+              <p><strong>Message:</strong> ${formData.message}</p>
+            </body>
+          </html>
+        `,
+      },
+      recipients: {
+        to: [{ address: formData.email },
+            { address: "marketing@hyre-energy.com" },
+        ], // Send to user's email for confirmation
+      },
+    };
+
     try {
-      const response = await axios.post("http://localhost:3001/send-email", formData);
-  
-      if (response.data.success) {
-        alert("Email sent successfully!");
+      const poller = await client.beginSend(emailMessage);
+      const result = await poller.pollUntilDone();
+
+      if (result) {
+        alert("Thank you for your message! We'll be in touch soon.");
         setFormData({
           firstName: "",
           lastName: "",
@@ -60,6 +94,7 @@ export default function Contact() {
       alert("An error occurred while sending the email.");
     }
   };
+
 
   return (
     <motion.div
@@ -136,9 +171,9 @@ export default function Contact() {
                 <dd>
                   <a
                     className="hover:text-gray-900"
-                    href="mailto:hyre-energy@hyre-energy.com"
+                    href="mailto:marketing@hyre-energy.com"
                   >
-                    hyre-energy@hyre-energy.com
+                    marketing@hyre-energy.com
                   </a>
                 </dd>
               </div>
