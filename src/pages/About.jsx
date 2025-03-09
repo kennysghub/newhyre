@@ -4,6 +4,8 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import BobbyImg from "../assets/Bobby.jpg";
 import ChristianImg from "../assets/ChristianRose.jpg";
+import JBImg from "../assets/JB.jpg";
+import DAImg from "../assets/DA.jpg";
 
 const Section = ({ children }) => {
   const ref = React.useRef(null);
@@ -126,9 +128,9 @@ export default function About() {
           </section>
         </Section>
 
-        {/* Team Section */}
+        {/* Leadership Section */}
         <Section>
-          <section className="w-full py-6 md:py-14 lg:py-20 bg-blue-50">
+          <section className="w-full py-6 md:py-14 lg:py-20 bg-blue-100">
             <div className="container mx-auto max-w-7xl px-4 md:px-6">
               <div className="space-y-5">
                 <div className="text-center space-y-5">
@@ -205,7 +207,86 @@ export default function About() {
             </div>
           </section>
         </Section>
+        
+        {/* Advisors Section */}
+        <Section>
+          <section className="w-full py-6 md:py-14 lg:py-20 bg-yellow-50">
+            <div className="container mx-auto max-w-7xl px-4 md:px-6">
+              <div className="space-y-5">
+                <div className="text-center space-y-5">
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+                    Meet the Advisors
+                  </h2>
+                  <p className="max-w-[900px] mx-auto text-gray-600 text-base sm:text-lg md:text-xl lg:text-2xl text-left">
+                    Hyre Energy is guided by world renowned industry and academic experts in topics spanning from renewable energy dynamics, electrochemical systems, and materials science to sustainable manufacturing processes and government policy.
+                  </p>
+                  <p className="max-w-[900px] mx-auto text-gray-600 text-base sm:text-lg md:text-xl lg:text-2xl text-left">
+                    Our advisors provide valuable guidance beyond the technical aspects and place a large emphasis on solving problems with more than just equations and technical solutions.
+                  </p>
+                </div>
 
+                <div className="grid md:grid-cols-2 gap-12 pt-8 max-w-6xl mx-auto">
+                  {/* Jack Brouwer Profile */}
+                  <div className="flex flex-col items-center text-center space-y-4">
+                    <div className="w-48 h-48 rounded-full overflow-hidden">
+                      <img
+                        src={JBImg}  // Replace with actual image path
+                        alt="Jack Brouwer, Advisor"
+                        className="object-cover w-full h-full object-top"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="text-2xl font-bold">Jack Brouwer</h3>
+                      <p className="text-blue-600 text-xl font-bold">
+                        Hydrogen Energy Systems & Policy
+                      </p>
+                      <div className="space-y-1 text-sm-xl1 text-gray-600">
+                        <p>Professor and Chancellor's Fellow, Mechanical and Aerospace Engineering</p>
+                        <p>Joint Professor, Chemical and Biomolecular Engineering</p>
+                        <p>Joint Professor, Civil and Environmental Engineering</p>
+                        <p>Director, Clean Energy Institute</p>
+                      </div>
+                      <p className="text-md text-gray-700 leading-relaxed mt-3 text-left">
+                        Dr. Jack Brouwer is a leading researcher in fuel cell and hydrogen technologies, with decades of experience advancing clean energy solutions. 
+                        As former Director of the NFCRC and now current Director of the Clean Energy Institute at UC Irvine, he has pioneered research on electrochemical energy system dynamics and hydrogen shaping the future of sustainable energy.
+                        His applied research has enabled him to work with policy makers to develop and implement clean energy legislation. 
+                        Nobody can deny that Jack's passion about hydrogen and sustainable energy is contagious and his leadership and values are inspiring.
+                      </p>
+                    </div>
+                  </div> 
+                  {/* Diran Apelian Profile */}
+                  <div className="flex flex-col items-center text-center space-y-4">
+                    <div className="w-48 h-48 rounded-full overflow-hidden">
+                      <img
+                        src={DAImg}  // Replace with actual image path
+                        alt="Diran Apelian, Advisor"
+                        className="object-cover w-full h-full object-top"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="text-2xl font-bold">Diran Apelian</h3>
+                      <p className="text-blue-600 text-xl font-bold">Materials Science & Business Operations</p>
+                      <div className="space-y-1 text-sm-xl1 text-gray-600">
+                        <p>Distinguished Professor, Materials Science and Engineering</p>
+                        <p>Director, Pratt & Whitney Center of Excellence</p>
+                        <p>Director, Advanced Casting Research Center</p>
+                        <p>Member, National Academy of Engineering</p>
+                        </div>
+                        <p className="text-md text-gray-700 leading-relaxed mt-3 text-left">
+                        Dr. Diran Apelian is widely recognized for his innovative research and leadership in metal processing. 
+                        He launched the ACRC research consortium in 1984 to link the best in engineering and science with the manufacturing needs of the metals processing industry 
+                        which still serves as a model for finding best practice solutions through academic research.
+                        More recently, his work in the development of technologies to recover and recycle materials has become critically important for a sustainable future. 
+                        Diran's commitment to solving problems for the good of humanity enshrines him as more than just an engineer.
+                      </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </Section>
+        
         {/* CTA Section */}
         <Section>
           <section className="w-full py-12 md:py-14 lg:py-20 bg-white">
