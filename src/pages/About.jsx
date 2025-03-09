@@ -36,7 +36,7 @@ export default function About() {
                   About Hyre Energy
                 </h1>
                 <p className="max-w-[900px] text-blue-100 md:text-3xl font-bold">
-                  Experts in hydrogen produced via renewable electrolysis
+                  Experts in hydrogen technologies and energy systems 
                 </p>
               </div>
             </div>
